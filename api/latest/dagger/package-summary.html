@@ -194,7 +194,7 @@
  href="http://en.wikipedia.org/wiki/Java_annotation#Processing">annotation processors</a>.
 
  <p>The entry point into the API is the <code>Component</code>, which annotates abstract types for
- Dagger 2 to implement. The dependency graph is configured using using annotations such as <code>Module</code>, <code>Provides</code> and <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>Inject</code></a>.
+ Dagger 2 to implement. The dependency graph is configured using annotations such as <code>Module</code>, <code>Provides</code> and <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>Inject</code></a>.
 
  <p><code>dagger.internal.codegen.ComponentProcessor</code> is the processor responsible for generating
  the implementation. Dagger uses the annotation procesor <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html?is-external=true" title="class or interface in java.util">service loader</a> to automatically configure the processor, so explict build configuration
