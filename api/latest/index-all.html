@@ -171,9 +171,17 @@
 <dd>
 <div class="block">Returns a newly-constructed <a href="dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.Builder.html#build--">build()</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.Builder.html" title="class in dagger.model">DependencyRequest.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Key.Builder.html#build--">build()</a></span> - Method in class dagger.model.<a href="dagger/model/Key.Builder.html" title="class in dagger.model">Key.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/AndroidInjector.Builder.html#Builder--">Builder()</a></span> - Constructor for class dagger.android.<a href="dagger/android/AndroidInjector.Builder.html" title="class in dagger.android">AndroidInjector.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.html#builder--">builder()</a></span> - Static method in class dagger.model.<a href="dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a></dt>
+<dd>
+<div class="block">Returns a new builder of dependency requests.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.Builder.html#Builder--">Builder()</a></span> - Constructor for class dagger.model.<a href="dagger/model/DependencyRequest.Builder.html" title="class in dagger.model">DependencyRequest.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Key.html#builder-javax.lang.model.type.TypeMirror-">builder(TypeMirror)</a></span> - Static method in class dagger.model.<a href="dagger/model/Key.html" title="class in dagger.model">Key</a></dt>
 <dd>
@@ -388,6 +396,16 @@
 <div class="block">Returns a timing recorder factory that delegates to the given factories, and ensures that any
  method called on this object, even transitively, does not throw a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><code>RuntimeException</code></a> or
  return null.</div>
+</dd>
+<dt><a href="dagger/model/DependencyRequest.html" title="class in dagger.model"><span class="typeNameLink">DependencyRequest</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">Represents a request for a <a href="dagger/model/Key.html" title="class in dagger.model"><code>Key</code></a> at an injection point.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.html#DependencyRequest--">DependencyRequest()</a></span> - Constructor for class dagger.model.<a href="dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="dagger/model/DependencyRequest.Builder.html" title="class in dagger.model"><span class="typeNameLink">DependencyRequest.Builder</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">A builder of <a href="dagger/model/DependencyRequest.html" title="class in dagger.model"><code>DependencyRequest</code></a>s.</div>
 </dd>
 <dt><a href="dagger/android/DispatchingAndroidInjector.html" title="class in dagger.android"><span class="typeNameLink">DispatchingAndroidInjector</span></a>&lt;<a href="dagger/android/DispatchingAndroidInjector.html" title="type parameter in DispatchingAndroidInjector">T</a>&gt; - Class in <a href="dagger/android/package-summary.html">dagger.android</a></dt>
 <dd>
@@ -620,6 +638,12 @@
 <div class="block">The method's return type forms the generic type argument of a <code>Set&lt;T&gt;</code>, and the returned
  value is contributed to the set.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.Builder.html#isNullable-boolean-">isNullable(boolean)</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.Builder.html" title="class in dagger.model">DependencyRequest.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.html#isNullable--">isNullable()</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a></dt>
+<dd>
+<div class="block">Returns <code>true</code> if this request allows null objects.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Scope.html#isProductionScope--">isProductionScope()</a></span> - Method in class dagger.model.<a href="dagger/model/Scope.html" title="class in dagger.model">Scope</a></dt>
 <dd>
 <div class="block">Returns <code>true</code> if this scope is the <a href="dagger/producers/ProductionScope.html" title="annotation in dagger.producers"><code>@ProductionScope</code></a> scope.</div>
@@ -646,6 +670,12 @@
 </a>
 <h2 class="title">K</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.Builder.html#key-dagger.model.Key-">key(Key)</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.Builder.html" title="class in dagger.model">DependencyRequest.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.html#key--">key()</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a></dt>
+<dd>
+<div class="block">The key of this request.</div>
+</dd>
 <dt><a href="dagger/model/Key.html" title="class in dagger.model"><span class="typeNameLink">Key</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
 <div class="block">A <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeMirror.html?is-external=true" title="class or interface in javax.lang.model.type">type</a> and an optional <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject">qualifier</a> that
@@ -661,6 +691,12 @@
 <dd>
 <div class="block">An object that identifies a multibinding contribution method and the module class that
  contributes it to the graph.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.Builder.html#kind-dagger.model.RequestKind-">kind(RequestKind)</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.Builder.html" title="class in dagger.model">DependencyRequest.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.html#kind--">kind()</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a></dt>
+<dd>
+<div class="block">The kind of this request.</div>
 </dd>
 </dl>
 <a name="I:L">
@@ -978,6 +1014,12 @@
 <dd>
 <div class="block">Called when the producer's output is requested; that is, when the first method is called that
  requires the production of this producer's output.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.Builder.html#requestElement-javax.lang.model.element.Element-">requestElement(Element)</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.Builder.html" title="class in dagger.model">DependencyRequest.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/DependencyRequest.html#requestElement--">requestElement()</a></span> - Method in class dagger.model.<a href="dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a></dt>
+<dd>
+<div class="block">The element that declares this dependency request.</div>
 </dd>
 <dt><a href="dagger/model/RequestKind.html" title="enum in dagger.model"><span class="typeNameLink">RequestKind</span></a> - Enum in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
