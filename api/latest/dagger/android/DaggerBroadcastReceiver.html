@@ -116,7 +116,8 @@ var activeTableTab = "activeTableTab";
 <pre>@Beta
 public abstract class <span class="typeNameLabel">DaggerBroadcastReceiver</span>
 extends <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a></pre>
-<div class="block">A <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> that injects its members in the first call to <a href="../../dagger/android/DaggerBroadcastReceiver.html#onReceive-android.content.Context-android.content.Intent-"><code>onReceive(Context, Intent)</code></a>.
+<div class="block">A <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> that injects its members in every call to <a href="../../dagger/android/DaggerBroadcastReceiver.html#onReceive-android.content.Context-android.content.Intent-"><code>onReceive(Context,
+ Intent)</code></a>.
 
  <p>This class should only be used for <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a>s that are declared in an <code>AndroidManifest.xml</code>. If, instead, the <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> is created in code, prefer
  constructor injection.
