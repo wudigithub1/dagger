@@ -87,6 +87,14 @@
 <dd>
 <div class="block">Adds this monitor's completion methods as a callback to the future.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#adjacentEdges-E-">adjacentEdges(E)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#adjacentNodes-N-">adjacentNodes(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#allowsParallelEdges--">allowsParallelEdges()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#allowsSelfLoops--">allowsSelfLoops()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="dagger/android/AndroidInjection.html" title="class in dagger.android"><span class="typeNameLink">AndroidInjection</span></a> - Class in <a href="dagger/android/package-summary.html">dagger.android</a></dt>
 <dd>
 <div class="block">Injects core Android types.</div>
@@ -129,6 +137,18 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/android/support/DaggerApplication.html#applicationInjector--">applicationInjector()</a></span> - Method in class dagger.android.support.<a href="dagger/android/support/DaggerApplication.html" title="class in dagger.android.support">DaggerApplication</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#asGraph--">asGraph()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.BindingNode.html#associatedDeclarations--">associatedDeclarations()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a></dt>
+<dd>
+<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element"><code>Element</code></a>s (other than the binding's <a href="dagger/model/Binding.html#bindingElement--"><code>Binding.bindingElement()</code></a>) that are
+ associated with the binding.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#atRoot--">atRoot()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>
+<div class="block">Returns <code>true</code> if the <a href="dagger/model/ComponentPath.html#currentComponent--">ComponentPath.currentComponent()</a> current component} is the
+ <a href="dagger/model/ComponentPath.html#rootComponent--">ComponentPath.rootComponent()</a> root component}.</div>
+</dd>
 </dl>
 <a name="I:B">
 <!--   -->
@@ -139,13 +159,59 @@
 <dd>
 <div class="block">The association between a <a href="dagger/model/Key.html" title="class in dagger.model"><code>Key</code></a> and the way in which instances of the key are provided.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.BindingNode.html#binding--">binding()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a></dt>
+<dd>
+<div class="block">The binding.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Binding.html#bindingElement--">bindingElement()</a></span> - Method in interface dagger.model.<a href="dagger/model/Binding.html" title="interface in dagger.model">Binding</a></dt>
 <dd>
 <div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element"><code>Element</code></a> that declares this binding.</div>
 </dd>
+<dt><a href="dagger/model/BindingGraph.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">The immutable graph of bindings, dependency requests, and components for a valid root component.</div>
+</dd>
+<dt><a href="dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph.BindingNode</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">A <b>binding node</b> in the binding graph.</div>
+</dd>
+<dt><a href="dagger/model/BindingGraph.ChildFactoryMethodEdge.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph.ChildFactoryMethodEdge</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">An edge that represents a subcomponent factory method linking a parent component to a child
+ subcomponent.</div>
+</dd>
+<dt><a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph.ComponentNode</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">A <b>component node</b> in the graph.</div>
+</dd>
+<dt><a href="dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph.DependencyEdge</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">An edge that represents a dependency on a binding.</div>
+</dd>
+<dt><a href="dagger/model/BindingGraph.Edge.html" title="interface in dagger.model"><span class="typeNameLink">BindingGraph.Edge</span></a> - Interface in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">An edge in the binding graph.</div>
+</dd>
+<dt><a href="dagger/model/BindingGraph.Node.html" title="interface in dagger.model"><span class="typeNameLink">BindingGraph.Node</span></a> - Interface in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">A node in the binding graph.</div>
+</dd>
+<dt><a href="dagger/model/BindingGraph.SubcomponentBuilderBindingEdge.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph.SubcomponentBuilderBindingEdge</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">An edge that represents the link between a parent component and a child subcomponent implied by
+ a subcomponent builder binding.</div>
+</dd>
 <dt><a href="dagger/model/BindingKind.html" title="enum in dagger.model"><span class="typeNameLink">BindingKind</span></a> - Enum in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
 <div class="block">Represents the different kinds of <a href="dagger/model/Binding.html" title="interface in dagger.model"><code>Binding</code></a>s that can exist in a binding graph.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#bindingNodes--">bindingNodes()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the binding nodes.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#bindingNodes-dagger.model.Key-">bindingNodes(Key)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the binding nodes for a key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/grpc/server/NettyServerModule.html#bindingTo-java.net.SocketAddress-">bindingTo(SocketAddress)</a></span> - Static method in class dagger.grpc.server.<a href="dagger/grpc/server/NettyServerModule.html" title="class in dagger.grpc.server">NettyServerModule</a></dt>
 <dd>
@@ -236,6 +302,43 @@
 <dd>
 <div class="block">A builder for a component.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#componentNode-dagger.model.ComponentPath-">componentNode(ComponentPath)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the component node for a component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#ComponentNode--">ComponentNode()</a></span> - Constructor for class dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#componentNodes--">componentNodes()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the component nodes.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#componentNodes-javax.lang.model.element.TypeElement-">componentNodes(TypeElement)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the component nodes for a component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.BindingNode.html#componentPath--">componentPath()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a></dt>
+<dd>
+<div class="block">The component that owns the <a href="dagger/model/BindingGraph.BindingNode.html#binding--"><code>BindingGraph.BindingNode.binding()</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#componentPath--">componentPath()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></dt>
+<dd>
+<div class="block">The component represented by this node.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.Node.html#componentPath--">componentPath()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.Node.html" title="interface in dagger.model">BindingGraph.Node</a></dt>
+<dd>
+<div class="block">The component this node belongs to.</div>
+</dd>
+<dt><a href="dagger/model/ComponentPath.html" title="class in dagger.model"><span class="typeNameLink">ComponentPath</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">A path containing a component and all of its ancestor components.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#ComponentPath--">ComponentPath()</a></span> - Constructor for class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#components--">components()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>
+<div class="block">Returns the component types, starting from the <a href="dagger/model/ComponentPath.html#rootComponent--">root
+ component</a> and ending with the <a href="dagger/model/ComponentPath.html#currentComponent--">current component</a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/DaggerApplication.html#contentProviderInjector--">contentProviderInjector()</a></span> - Method in class dagger.android.<a href="dagger/android/DaggerApplication.html" title="class in dagger.android">DaggerApplication</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/HasContentProviderInjector.html#contentProviderInjector--">contentProviderInjector()</a></span> - Method in interface dagger.android.<a href="dagger/android/HasContentProviderInjector.html" title="interface in dagger.android">HasContentProviderInjector</a></dt>
@@ -260,6 +363,10 @@
 <dd>
 <div class="block">Creates an <a href="dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> for <code>instance</code>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#create-java.lang.Iterable-">create(Iterable&lt;TypeElement&gt;)</a></span> - Static method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>
+<div class="block">Returns a new <a href="dagger/model/ComponentPath.html" title="class in dagger.model"><code>ComponentPath</code></a> from <code>components</code>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/ProducerToken.html#create-java.lang.Class-">create(Class&lt;?&gt;)</a></span> - Static method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/ProducerToken.html" title="class in dagger.producers.monitoring">ProducerToken</a></dt>
 <dd>
 <div class="block">Creates a token for a class token that represents the generated factory for a producer method.</div>
@@ -278,6 +385,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/TimingProductionComponentMonitor.Factory.html#create-java.lang.Object-">create(Object)</a></span> - Method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/TimingProductionComponentMonitor.Factory.html" title="class in dagger.producers.monitoring">TimingProductionComponentMonitor.Factory</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#currentComponent--">currentComponent()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>
+<div class="block">Returns the component at the end of the path.</div>
+</dd>
 <dt><a href="dagger/grpc/server/CurrentContextModule.html" title="class in dagger.grpc.server"><span class="typeNameLink">CurrentContextModule</span></a> - Class in <a href="dagger/grpc/server/package-summary.html">dagger.grpc.server</a></dt>
 <dd>
 <div class="block">Provides the current <code>Context</code>.</div>
@@ -408,6 +519,15 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/android/DaggerService.html#DaggerService--">DaggerService()</a></span> - Constructor for class dagger.android.<a href="dagger/android/DaggerService.html" title="class in dagger.android">DaggerService</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.SubcomponentBuilderBindingEdge.html#declaringModules--">declaringModules()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.SubcomponentBuilderBindingEdge.html" title="class in dagger.model">BindingGraph.SubcomponentBuilderBindingEdge</a></dt>
+<dd>
+<div class="block">The modules that <a href="dagger/Module.html#subcomponents--">declare the subcomponent</a> that generated
+ this edge.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#degree-N-">degree(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#delegate--">delegate()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/TimingRecorders.html#delegatingProductionComponentTimingRecorderFactory-java.util.Collection-">delegatingProductionComponentTimingRecorderFactory(Collection&lt;ProductionComponentTimingRecorder.Factory&gt;)</a></span> - Static method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/TimingRecorders.html" title="class in dagger.producers.monitoring">TimingRecorders</a></dt>
 <dd>
 <div class="block">Returns a timing recorder factory that delegates to the given factories, and ensures that any
@@ -417,6 +537,22 @@
 <dt><span class="memberNameLink"><a href="dagger/model/Binding.html#dependencies--">dependencies()</a></span> - Method in interface dagger.model.<a href="dagger/model/Binding.html" title="interface in dagger.model">Binding</a></dt>
 <dd>
 <div class="block">The dependencies of this binding.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#dependencyEdges--">dependencyEdges()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the dependency edges.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#dependencyEdges-dagger.model.BindingGraph.BindingNode-">dependencyEdges(BindingGraph.BindingNode)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the dependency edges for the dependencies of a binding.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#dependencyEdges-dagger.model.DependencyRequest-">dependencyEdges(DependencyRequest)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the dependency edges from any binding for a dependency request.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.DependencyEdge.html#dependencyRequest--">dependencyRequest()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a></dt>
+<dd>
+<div class="block">The dependency request.</div>
 </dd>
 <dt><a href="dagger/model/DependencyRequest.html" title="class in dagger.model"><span class="typeNameLink">DependencyRequest</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
@@ -442,10 +578,38 @@
 </a>
 <h2 class="title">E</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#edgeConnecting-N-N-">edgeConnecting(N, N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#edgeConnectingOrNull-N-N-">edgeConnectingOrNull(N, N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#edgeOrder--">edgeOrder()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#edges--">edges()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#edgesConnecting-N-N-">edgesConnecting(N, N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="dagger/multibindings/ElementsIntoSet.html" title="annotation in dagger.multibindings"><span class="typeNameLink">ElementsIntoSet</span></a> - Annotation Type in <a href="dagger/multibindings/package-summary.html">dagger.multibindings</a></dt>
 <dd>
 <div class="block">The method's return type is <code>Set&lt;T&gt;</code> and all values are contributed to the set.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointBindingNodes--">entryPointBindingNodes()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the binding nodes for bindings that directly satisfy entry points.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointEdges--">entryPointEdges()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the dependency edges for all entry points for all components and subcomponents.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointEdges-dagger.model.ComponentPath-">entryPointEdges(ComponentPath)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the dependency edges for the entry points of a given <code>component</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.BindingNode-">entryPointEdgesDependingOnBindingNode(BindingGraph.BindingNode)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the edges for entry points that transitively depend on a binding.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Key.MultibindingContributionIdentifier.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class dagger.model.<a href="dagger/model/Key.MultibindingContributionIdentifier.html" title="class in dagger.model">Key.MultibindingContributionIdentifier</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/ProducerToken.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/ProducerToken.html" title="class in dagger.producers.monitoring">ProducerToken</a></dt>
@@ -467,6 +631,10 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/TimingProductionComponentMonitor.Factory.html#Factory-dagger.producers.monitoring.ProductionComponentTimingRecorder.Factory-">Factory(ProductionComponentTimingRecorder.Factory)</a></span> - Constructor for class dagger.producers.monitoring.<a href="dagger/producers/monitoring/TimingProductionComponentMonitor.Factory.html" title="class in dagger.producers.monitoring">TimingProductionComponentMonitor.Factory</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ChildFactoryMethodEdge.html#factoryMethod--">factoryMethod()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ChildFactoryMethodEdge.html" title="class in dagger.model">BindingGraph.ChildFactoryMethodEdge</a></dt>
+<dd>
+<div class="block">The subcomponent factory method element.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/ProducerMonitor.html#failed-java.lang.Throwable-">failed(Throwable)</a></span> - Method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/ProducerMonitor.html" title="class in dagger.producers.monitoring">ProducerMonitor</a></dt>
 <dd>
 <div class="block">Called when the producer's future has failed with an exception.</div>
@@ -484,6 +652,12 @@
 <dd>
 <div class="block">A <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject"><code>Qualifier</code></a> to inject a <a href="dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><code>ReleasableReferenceManager</code></a> or <a href="dagger/releasablereferences/TypedReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><code>TypedReleasableReferenceManager</code></a> object for a particular scope.</div>
 </dd>
+<dt><a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model"><span class="typeNameLink">ForwardingNetwork</span></a>&lt;<a href="dagger/model/ForwardingNetwork.html" title="type parameter in ForwardingNetwork">N</a>,<a href="dagger/model/ForwardingNetwork.html" title="type parameter in ForwardingNetwork">E</a>&gt; - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">A <a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/graph/Network.html?is-external=true" title="class or interface in com.google.common.graph"><code>Network</code></a> that delegates all methods to another instance.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#ForwardingNetwork-com.google.common.graph.Network-">ForwardingNetwork(Network&lt;N, E&gt;)</a></span> - Constructor for class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/DaggerActivity.html#fragmentInjector--">fragmentInjector()</a></span> - Method in class dagger.android.<a href="dagger/android/DaggerActivity.html" title="class in dagger.android">DaggerActivity</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/DaggerApplication.html#fragmentInjector--">fragmentInjector()</a></span> - Method in class dagger.android.<a href="dagger/android/DaggerApplication.html" title="class in dagger.android">DaggerApplication</a></dt>
@@ -565,10 +739,14 @@
 <dd>
 <div class="block">Provides an <a href="dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content"><code>ContentProvider</code></a>s.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#hasEdgeConnecting-N-N-">hasEdgeConnecting(N, N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="dagger/android/HasFragmentInjector.html" title="interface in dagger.android"><span class="typeNameLink">HasFragmentInjector</span></a> - Interface in <a href="dagger/android/package-summary.html">dagger.android</a></dt>
 <dd>
 <div class="block">Provides an <a href="dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app"><code>Fragment</code></a>s.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#hashCode--">hashCode()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Key.html#hashCode--">hashCode()</a></span> - Method in class dagger.model.<a href="dagger/model/Key.html" title="class in dagger.model">Key</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Key.MultibindingContributionIdentifier.html#hashCode--">hashCode()</a></span> - Method in class dagger.model.<a href="dagger/model/Key.MultibindingContributionIdentifier.html" title="class in dagger.model">Key.MultibindingContributionIdentifier</a></dt>
@@ -595,6 +773,14 @@
 </a>
 <h2 class="title">I</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#incidentEdges-N-">incidentEdges(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#incidentNodes-E-">incidentNodes(E)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#inDegree-N-">inDegree(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#inEdges-N-">inEdges(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/grpc/server/processor/GrpcServiceProcessor.html#initSteps--">initSteps()</a></span> - Method in class dagger.grpc.server.processor.<a href="dagger/grpc/server/processor/GrpcServiceProcessor.html" title="class in dagger.grpc.server.processor">GrpcServiceProcessor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/AndroidInjection.html#inject-android.app.Activity-">inject(Activity)</a></span> - Static method in class dagger.android.<a href="dagger/android/AndroidInjection.html" title="class in dagger.android">AndroidInjection</a></dt>
@@ -658,6 +844,12 @@
 <dd>
 <div class="block">The method's return type forms the generic type argument of a <code>Set&lt;T&gt;</code>, and the returned
  value is contributed to the set.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#isDirected--">isDirected()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.DependencyEdge.html#isEntryPoint--">isEntryPoint()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a></dt>
+<dd>
+<div class="block">Returns <code>true</code> if this edge represents an entry point.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Binding.html#isNullable--">isNullable()</a></span> - Method in interface dagger.model.<a href="dagger/model/Binding.html" title="interface in dagger.model">Binding</a></dt>
 <dd>
@@ -814,6 +1006,10 @@
 <div class="block">Installing this module into a <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Singleton.html?is-external=true" title="class or interface in javax.inject"><code>@Singleton</code></a> component means the component can
  provide a Netty-based <code>Server</code>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#nodeOrder--">nodeOrder()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#nodes--">nodes()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/ProducerMonitor.html#noOp--">noOp()</a></span> - Static method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/ProducerMonitor.html" title="class in dagger.producers.monitoring">ProducerMonitor</a></dt>
 <dd>
 <div class="block">Returns a monitor that does no monitoring.</div>
@@ -870,12 +1066,22 @@
 <dd>
 <div class="block">Releases references for <a href="dagger/android/ReleaseReferencesAt.html" title="annotation in dagger.android"><code>ReleaseReferencesAt</code></a> scopes whose <a href="dagger/android/ReleaseReferencesAt.html#value--"><code>ReleaseReferencesAt.value()</code></a> is less than or equal to <code>level</code>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#outDegree-N-">outDegree(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#outEdges-N-">outEdges(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:P">
 <!--   -->
 </a>
 <h2 class="title">P</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#parentComponent--">parentComponent()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>
+<div class="block">Returns the parent of the <a href="dagger/model/ComponentPath.html#currentComponent--">ComponentPath.currentComponent()</a> current component}.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#predecessors-N-">predecessors(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/grpc/server/processor/GrpcServiceProcessor.html#process-com.google.common.collect.SetMultimap-">process(SetMultimap&lt;Class&lt;? extends Annotation&gt;, Element&gt;)</a></span> - Method in class dagger.grpc.server.processor.<a href="dagger/grpc/server/processor/GrpcServiceProcessor.html" title="class in dagger.grpc.server.processor">GrpcServiceProcessor</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="dagger/producers/Produced.html" title="class in dagger.producers"><span class="typeNameLink">Produced</span></a>&lt;<a href="dagger/producers/Produced.html" title="type parameter in Produced">T</a>&gt; - Class in <a href="dagger/producers/package-summary.html">dagger.producers</a></dt>
@@ -1073,6 +1279,14 @@
 <dd>
 <div class="block">A scope that indicates that the object returned by a binding may be (but might not be) reused.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#rootComponent--">rootComponent()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>
+<div class="block">Returns the root <a href="dagger/Component.html" title="annotation in dagger"><code>Component</code></a>- or <a href="dagger/producers/ProductionComponent.html" title="annotation in dagger.producers"><code>ProductionComponent</code></a>-annotated type</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#rootComponentNode--">rootComponentNode()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dd>
+<div class="block">Returns the component node for the root component.</div>
+</dd>
 </dl>
 <a name="I:S">
 <!--   -->
@@ -1152,6 +1366,8 @@
 <dd>
 <div class="block">Returns a successful <code>Produced</code>, whose <a href="dagger/producers/Produced.html#get--"><code>Produced.get()</code></a> will return the given value.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#successors-N-">successors(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/support/DaggerAppCompatActivity.html#supportFragmentInjector--">supportFragmentInjector()</a></span> - Method in class dagger.android.support.<a href="dagger/android/support/DaggerAppCompatActivity.html" title="class in dagger.android.support">DaggerAppCompatActivity</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/support/DaggerAppCompatDialogFragment.html#supportFragmentInjector--">supportFragmentInjector()</a></span> - Method in class dagger.android.support.<a href="dagger/android/support/DaggerAppCompatDialogFragment.html" title="class in dagger.android.support">DaggerAppCompatDialogFragment</a></dt>
@@ -1185,6 +1401,18 @@
 <dd>
 <div class="block">Returns a <a href="dagger/model/Key.Builder.html" title="class in dagger.model"><code>Key.Builder</code></a> that inherits the properties of this key.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.BindingNode.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ChildFactoryMethodEdge.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ChildFactoryMethodEdge.html" title="class in dagger.model">BindingGraph.ChildFactoryMethodEdge</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.DependencyEdge.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.SubcomponentBuilderBindingEdge.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.SubcomponentBuilderBindingEdge.html" title="class in dagger.model">BindingGraph.SubcomponentBuilderBindingEdge</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Key.MultibindingContributionIdentifier.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/Key.MultibindingContributionIdentifier.html" title="class in dagger.model">Key.MultibindingContributionIdentifier</a></dt>
 <dt><span class="memberNameLink"><a href="dagger/model/Key.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/Key.html" title="class in dagger.model">Key</a></dt>
 <dd>&nbsp;</dd>
