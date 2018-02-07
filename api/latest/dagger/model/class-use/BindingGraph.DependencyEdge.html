@@ -88,6 +88,13 @@
  binding graph.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#dagger.spi">dagger.spi</a></td>
+<td class="colLast">
+<div class="block">This package contains the Service Provider interface (SPI) to the <a href="../../../dagger/model/package-summary.html"><code>dagger.model</code></a> APIs at
+ annotation-processing-time.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -138,6 +145,28 @@
 <td class="colFirst"><code><a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BindingGraph.</span><code><span class="memberNameLink"><a href="../../../dagger/model/BindingGraph.html#entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.BindingNode-">entryPointEdgesDependingOnBindingNode</a></span>(<a href="../../../dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode)</code>
 <div class="block">Returns the edges for entry points that transitively depend on a binding.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="dagger.spi">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a> in <a href="../../../dagger/spi/package-summary.html">dagger.spi</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../dagger/spi/package-summary.html">dagger.spi</a> with parameters of type <a href="../../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ValidationItem.</span><code><span class="memberNameLink"><a href="../../../dagger/spi/ValidationItem.html#create-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.DependencyEdge-java.lang.String-">create</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/tools/Diagnostic.Kind.html?is-external=true" title="class or interface in javax.tools">Diagnostic.Kind</a>&nbsp;diagnosticKind,
+      <a href="../../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a>&nbsp;edge,
+      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
+<div class="block">Creates a validation item on <code>edge</code>.</div>
 </td>
 </tr>
 </tbody>

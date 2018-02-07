@@ -201,6 +201,10 @@
 <div class="block">An edge that represents the link between a parent component and a child subcomponent implied by
  a subcomponent builder binding.</div>
 </dd>
+<dt><a href="dagger/spi/BindingGraphPlugin.html" title="interface in dagger.spi"><span class="typeNameLink">BindingGraphPlugin</span></a> - Interface in <a href="dagger/spi/package-summary.html">dagger.spi</a></dt>
+<dd>
+<div class="block">A pluggable visitor for <a href="dagger/model/BindingGraph.html" title="class in dagger.model"><code>BindingGraph</code></a>.</div>
+</dd>
 <dt><a href="dagger/model/BindingKind.html" title="enum in dagger.model"><span class="typeNameLink">BindingKind</span></a> - Enum in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
 <div class="block">Represents the different kinds of <a href="dagger/model/Binding.html" title="interface in dagger.model"><code>Binding</code></a>s that can exist in a binding graph.</div>
@@ -387,6 +391,14 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/TimingProductionComponentMonitor.Factory.html#create-java.lang.Object-">create(Object)</a></span> - Method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/TimingProductionComponentMonitor.Factory.html" title="class in dagger.producers.monitoring">TimingProductionComponentMonitor.Factory</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/ValidationItem.html#create-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.Node-java.lang.String-">create(Diagnostic.Kind, BindingGraph.Node, String)</a></span> - Static method in class dagger.spi.<a href="dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></dt>
+<dd>
+<div class="block">Creates a validation item on <code>node</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/ValidationItem.html#create-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.DependencyEdge-java.lang.String-">create(Diagnostic.Kind, BindingGraph.DependencyEdge, String)</a></span> - Static method in class dagger.spi.<a href="dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></dt>
+<dd>
+<div class="block">Creates a validation item on <code>edge</code>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#currentComponent--">currentComponent()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
 <dd>
 <div class="block">Returns the component at the end of the path.</div>
@@ -439,6 +451,11 @@
 <div class="block">This package contains the API by which Dagger allows you <a
  href="https://google.github.io/dagger/users-guide.html#releasable-references">release references</a> held within
  some scopes.</div>
+</dd>
+<dt><a href="dagger/spi/package-summary.html">dagger.spi</a> - package dagger.spi</dt>
+<dd>
+<div class="block">This package contains the Service Provider interface (SPI) to the <a href="dagger/model/package-summary.html"><code>dagger.model</code></a> APIs at
+ annotation-processing-time.</div>
 </dd>
 <dt><a href="dagger/android/DaggerActivity.html" title="class in dagger.android"><span class="typeNameLink">DaggerActivity</span></a> - Class in <a href="dagger/android/package-summary.html">dagger.android</a></dt>
 <dd>
@@ -566,6 +583,8 @@
 <dd>
 <div class="block">A builder of <a href="dagger/model/DependencyRequest.html" title="class in dagger.model"><code>DependencyRequest</code></a>s.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/ValidationItem.html#diagnosticKind--">diagnosticKind()</a></span> - Method in class dagger.spi.<a href="dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="dagger/android/DispatchingAndroidInjector.html" title="class in dagger.android"><span class="typeNameLink">DispatchingAndroidInjector</span></a>&lt;<a href="dagger/android/DispatchingAndroidInjector.html" title="type parameter in DispatchingAndroidInjector">T</a>&gt; - Class in <a href="dagger/android/package-summary.html">dagger.android</a></dt>
 <dd>
 <div class="block">Performs members-injection on instances of core Android types (e.g.</div>
@@ -580,6 +599,11 @@
 </a>
 <h2 class="title">E</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="dagger/spi/ValidationItem.html#edge--">edge()</a></span> - Method in class dagger.spi.<a href="dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></dt>
+<dd>
+<div class="block">This method is only intended to be used by Dagger's implementation and may not remain part of
+ the official API.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#edgeConnecting-N-N-">edgeConnecting(N, N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#edgeConnectingOrNull-N-N-">edgeConnectingOrNull(N, N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
@@ -783,6 +807,16 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#inEdges-N-">inEdges(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/BindingGraphPlugin.html#initFiler-javax.annotation.processing.Filer-">initFiler(Filer)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/BindingGraphPlugin.html" title="interface in dagger.spi">BindingGraphPlugin</a></dt>
+<dd>
+<div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Filer.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Filer</code></a> that it can use to write Java or other files based
+ on the binding graph.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/BindingGraphPlugin.html#initOptions-java.util.Map-">initOptions(Map&lt;String, String&gt;)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/BindingGraphPlugin.html" title="interface in dagger.spi">BindingGraphPlugin</a></dt>
+<dd>
+<div class="block">Initializes this plugin with a filtered view of the options passed on the <code>javac</code>
+ command-line for all keys from <a href="dagger/spi/BindingGraphPlugin.html#supportedOptions--"><code>BindingGraphPlugin.supportedOptions()</code></a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/grpc/server/processor/GrpcServiceProcessor.html#initSteps--">initSteps()</a></span> - Method in class dagger.grpc.server.processor.<a href="dagger/grpc/server/processor/GrpcServiceProcessor.html" title="class in dagger.grpc.server.processor">GrpcServiceProcessor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/AndroidInjection.html#inject-android.app.Activity-">inject(Activity)</a></span> - Static method in class dagger.android.<a href="dagger/android/AndroidInjection.html" title="class in dagger.android">AndroidInjection</a></dt>
@@ -962,6 +996,8 @@
 <dd>
 <div class="block">Injects dependencies into the fields and methods on instances of type <code>T</code>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/ValidationItem.html#message--">message()</a></span> - Method in class dagger.spi.<a href="dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/releasablereferences/TypedReleasableReferenceManager.html#metadata--">metadata()</a></span> - Method in interface dagger.releasablereferences.<a href="dagger/releasablereferences/TypedReleasableReferenceManager.html" title="interface in dagger.releasablereferences">TypedReleasableReferenceManager</a></dt>
 <dd>
 <div class="block">Returns the annotation on <a href="dagger/releasablereferences/ReleasableReferenceManager.html#scope--"><code>ReleasableReferenceManager.scope()</code></a> that is annotated with <a href="dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><code>CanReleaseReferences</code></a>.</div>
@@ -1007,6 +1043,11 @@
 <dd>
 <div class="block">Installing this module into a <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Singleton.html?is-external=true" title="class or interface in javax.inject"><code>@Singleton</code></a> component means the component can
  provide a Netty-based <code>Server</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/ValidationItem.html#node--">node()</a></span> - Method in class dagger.spi.<a href="dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></dt>
+<dd>
+<div class="block">This method is only intended to be used by Dagger's implementation and may not remain part of
+ the official API.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#nodeOrder--">nodeOrder()</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
 <dd>&nbsp;</dd>
@@ -1081,6 +1122,10 @@
 <dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#parentComponent--">parentComponent()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
 <dd>
 <div class="block">Returns the parent of the <a href="dagger/model/ComponentPath.html#currentComponent--">ComponentPath.currentComponent()</a> current component}.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/BindingGraphPlugin.html#pluginName--">pluginName()</a></span> - Method in interface dagger.spi.<a href="dagger/spi/BindingGraphPlugin.html" title="interface in dagger.spi">BindingGraphPlugin</a></dt>
+<dd>
+<div class="block">A distinguishing name of the plugin that will be used in diagnostics printed to the <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Messager.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Messager</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#predecessors-N-">predecessors(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
 <dd>&nbsp;</dd>
@@ -1370,6 +1415,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#successors-N-">successors(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/BindingGraphPlugin.html#supportedOptions--">supportedOptions()</a></span> - Method in interface dagger.spi.<a href="dagger/spi/BindingGraphPlugin.html" title="interface in dagger.spi">BindingGraphPlugin</a></dt>
+<dd>
+<div class="block">Returns the annotation-processing options that this plugin uses to configure behavior.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/support/DaggerAppCompatActivity.html#supportFragmentInjector--">supportFragmentInjector()</a></span> - Method in class dagger.android.support.<a href="dagger/android/support/DaggerAppCompatActivity.html" title="class in dagger.android.support">DaggerAppCompatActivity</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/support/DaggerAppCompatDialogFragment.html#supportFragmentInjector--">supportFragmentInjector()</a></span> - Method in class dagger.android.support.<a href="dagger/android/support/DaggerAppCompatDialogFragment.html" title="class in dagger.android.support">DaggerAppCompatDialogFragment</a></dt>
@@ -1441,6 +1490,12 @@
 </a>
 <h2 class="title">V</h2>
 <dl>
+<dt><a href="dagger/spi/ValidationItem.html" title="class in dagger.spi"><span class="typeNameLink">ValidationItem</span></a> - Class in <a href="dagger/spi/package-summary.html">dagger.spi</a></dt>
+<dd>
+<div class="block">A single item that is reported by <a href="dagger/spi/BindingGraphPlugin.html" title="interface in dagger.spi"><code>BindingGraphPlugin</code></a>s.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/ValidationItem.html#ValidationItem--">ValidationItem()</a></span> - Constructor for class dagger.spi.<a href="dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingKind.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum dagger.model.<a href="dagger/model/BindingKind.html" title="enum in dagger.model">BindingKind</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
@@ -1458,6 +1513,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-">visitGraph(BindingGraph)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/BindingGraphPlugin.html" title="interface in dagger.spi">BindingGraphPlugin</a></dt>
+<dd>
+<div class="block">Called once for each valid root binding graph encountered by the Dagger processor.</div>
 </dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;</div>
