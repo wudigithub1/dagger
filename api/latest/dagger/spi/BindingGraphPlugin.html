@@ -49,7 +49,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../dagger/spi/ValidationItem.html" title="class in dagger.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../index.html?dagger/spi/BindingGraphPlugin.html" target="_top">Frames</a></li>
@@ -161,8 +161,9 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-">visitGraph</a></span>(<a href="../../dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a>&nbsp;bindingGraph)</code>
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visitGraph</a></span>(<a href="../../dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a>&nbsp;bindingGraph,
+          <a href="../../dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a>&nbsp;diagnosticReporter)</code>
 <div class="block">Called once for each valid root binding graph encountered by the Dagger processor.</div>
 </td>
 </tr>
@@ -181,18 +182,16 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="visitGraph-dagger.model.BindingGraph-">
+<a name="visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>visitGraph</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../dagger/spi/ValidationItem.html" title="class in dagger.spi">ValidationItem</a>&gt;&nbsp;visitGraph(<a href="../../dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a>&nbsp;bindingGraph)</pre>
-<div class="block">Called once for each valid root binding graph encountered by the Dagger processor.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>items used to print notes, warnings, and errors about the binding graph to the <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Messager.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Messager</code></a></dd>
-</dl>
+<pre>void&nbsp;visitGraph(<a href="../../dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a>&nbsp;bindingGraph,
+                <a href="../../dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a>&nbsp;diagnosticReporter)</pre>
+<div class="block">Called once for each valid root binding graph encountered by the Dagger processor. May report
+ diagnostics using <code>diagnosticReporter</code>.</div>
 </li>
 </ul>
 <a name="initFiler-javax.annotation.processing.Filer-">
@@ -204,7 +203,11 @@ var activeTableTab = "activeTableTab";
 <pre>default&nbsp;void&nbsp;initFiler(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Filer.html?is-external=true" title="class or interface in javax.annotation.processing">Filer</a>&nbsp;filer)</pre>
 <div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Filer.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Filer</code></a> that it can use to write Java or other files based
  on the binding graph. This will be called once per instance of this plugin, before any graph is
- <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-">visited</a>.</div>
+ <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getFiler--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getFiler()</code></a></dd>
+</dl>
 </li>
 </ul>
 <a name="initTypes-javax.lang.model.util.Types-">
@@ -215,7 +218,7 @@ var activeTableTab = "activeTableTab";
 <h4>initTypes</h4>
 <pre>default&nbsp;void&nbsp;initTypes(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util">Types</a>&nbsp;types)</pre>
 <div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util"><code>Types</code></a> instance. This will be called once per instance of
- this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-">visited</a>.</div>
+ this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getTypeUtils--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getTypeUtils()</code></a></dd>
@@ -230,7 +233,7 @@ var activeTableTab = "activeTableTab";
 <h4>initElements</h4>
 <pre>default&nbsp;void&nbsp;initElements(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util">Elements</a>&nbsp;elements)</pre>
 <div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util"><code>Elements</code></a> instance. This will be called once per instance
- of this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-">visited</a>.</div>
+ of this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getTypeUtils--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getTypeUtils()</code></a></dd>
@@ -246,7 +249,7 @@ var activeTableTab = "activeTableTab";
 <pre>default&nbsp;void&nbsp;initOptions(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;options)</pre>
 <div class="block">Initializes this plugin with a filtered view of the options passed on the <code>javac</code>
  command-line for all keys from <a href="../../dagger/spi/BindingGraphPlugin.html#supportedOptions--"><code>supportedOptions()</code></a>. This will be called once per
- instance of this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-">visited</a>.</div>
+ instance of this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getOptions--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getOptions()</code></a></dd>
@@ -307,7 +310,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../dagger/spi/ValidationItem.html" title="class in dagger.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../index.html?dagger/spi/BindingGraphPlugin.html" target="_top">Frames</a></li>
