@@ -118,8 +118,11 @@
 </dd>
 <dt><a href="dagger/android/AndroidMemorySensitiveReferenceManager.html" title="class in dagger.android"><span class="typeNameLink">AndroidMemorySensitiveReferenceManager</span></a> - Class in <a href="dagger/android/package-summary.html">dagger.android</a></dt>
 <dd>
-<div class="block">Releases references in <a href="dagger/android/ReleaseReferencesAt.html" title="annotation in dagger.android"><code>ReleaseReferencesAt</code></a> <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Scope.html?is-external=true" title="class or interface in javax.inject">scopes</a> in
- low-memory conditions.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 </dd>
 <dt><a href="dagger/android/support/AndroidSupportInjection.html" title="class in dagger.android.support"><span class="typeNameLink">AndroidSupportInjection</span></a> - Class in <a href="dagger/android/support/package-summary.html">dagger.android.support</a></dt>
 <dd>
@@ -290,10 +293,11 @@
 </dd>
 <dt><a href="dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><span class="typeNameLink">CanReleaseReferences</span></a> - Annotation Type in <a href="dagger/releasablereferences/package-summary.html">dagger.releasablereferences</a></dt>
 <dd>
-<div class="block">Annotates <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Scope.html?is-external=true" title="class or interface in javax.inject">scope annotations</a> to indicate that references to
- objects stored within that scope can be <a
- href="https://google.github.io/dagger/users-guide.html#releasable-references">released</a> during the lifetime
- of the scope.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 </dd>
 <dt><a href="dagger/multibindings/ClassKey.html" title="annotation in dagger.multibindings"><span class="typeNameLink">ClassKey</span></a> - Annotation Type in <a href="dagger/multibindings/package-summary.html">dagger.multibindings</a></dt>
 <dd>
@@ -665,7 +669,11 @@
 </dd>
 <dt><a href="dagger/releasablereferences/ForReleasableReferences.html" title="annotation in dagger.releasablereferences"><span class="typeNameLink">ForReleasableReferences</span></a> - Annotation Type in <a href="dagger/releasablereferences/package-summary.html">dagger.releasablereferences</a></dt>
 <dd>
-<div class="block">A <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject"><code>Qualifier</code></a> to inject a <a href="dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><code>ReleasableReferenceManager</code></a> or <a href="dagger/releasablereferences/TypedReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><code>TypedReleasableReferenceManager</code></a> object for a particular scope.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 </dd>
 <dt><a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model"><span class="typeNameLink">ForwardingNetwork</span></a>&lt;<a href="dagger/model/ForwardingNetwork.html" title="type parameter in ForwardingNetwork">N</a>,<a href="dagger/model/ForwardingNetwork.html" title="type parameter in ForwardingNetwork">E</a>&gt; - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
@@ -995,6 +1003,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/releasablereferences/TypedReleasableReferenceManager.html#metadata--">metadata()</a></span> - Method in interface dagger.releasablereferences.<a href="dagger/releasablereferences/TypedReleasableReferenceManager.html" title="interface in dagger.releasablereferences">TypedReleasableReferenceManager</a></dt>
 <dd>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Returns the annotation on <a href="dagger/releasablereferences/ReleasableReferenceManager.html#scope--"><code>ReleasableReferenceManager.scope()</code></a> that is annotated with <a href="dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><code>CanReleaseReferences</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/ProducerMonitor.html#methodFinished--">methodFinished()</a></span> - Method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/ProducerMonitor.html" title="class in dagger.producers.monitoring">ProducerMonitor</a></dt>
@@ -1097,6 +1106,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/AndroidMemorySensitiveReferenceManager.html#onTrimMemory-int-">onTrimMemory(int)</a></span> - Method in class dagger.android.<a href="dagger/android/AndroidMemorySensitiveReferenceManager.html" title="class in dagger.android">AndroidMemorySensitiveReferenceManager</a></dt>
 <dd>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Releases references for <a href="dagger/android/ReleaseReferencesAt.html" title="annotation in dagger.android"><code>ReleaseReferencesAt</code></a> scopes whose <a href="dagger/android/ReleaseReferencesAt.html#value--"><code>ReleaseReferencesAt.value()</code></a> is less than or equal to <code>level</code>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ForwardingNetwork.html#outDegree-N-">outDegree(N)</a></span> - Method in class dagger.model.<a href="dagger/model/ForwardingNetwork.html" title="class in dagger.model">ForwardingNetwork</a></dt>
@@ -1268,8 +1278,11 @@
 </dd>
 <dt><a href="dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><span class="typeNameLink">ReleasableReferenceManager</span></a> - Interface in <a href="dagger/releasablereferences/package-summary.html">dagger.releasablereferences</a></dt>
 <dd>
-<div class="block">An object that can <a href="https://google.github.io/dagger/users-guide.html#releasable-references">release or
- restore strong references</a> held in a <a href="dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><code>@CanReleaseReferences</code></a> scope.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Scope.html#releasableReferencesMetadata--">releasableReferencesMetadata()</a></span> - Method in class dagger.model.<a href="dagger/model/Scope.html" title="class in dagger.model">Scope</a></dt>
 <dd>
@@ -1282,11 +1295,15 @@
 </dd>
 <dt><a href="dagger/android/ReleaseReferencesAt.html" title="annotation in dagger.android"><span class="typeNameLink">ReleaseReferencesAt</span></a> - Annotation Type in <a href="dagger/android/package-summary.html">dagger.android</a></dt>
 <dd>
-<div class="block">Annotates <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Scope.html?is-external=true" title="class or interface in javax.inject">scopes</a> to associate them with a low-memory threshold
- level, as described in <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true#onTrimMemory-int-" title="class or interface in android.app"><code>Application.onTrimMemory(int)</code></a>.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/releasablereferences/ReleasableReferenceManager.html#releaseStrongReferences--">releaseStrongReferences()</a></span> - Method in interface dagger.releasablereferences.<a href="dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences">ReleasableReferenceManager</a></dt>
 <dd>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Releases the strong references held by all providers in this <a href="dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a> to the
  objects previously returned by <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true#get--" title="class or interface in javax.inject"><code>Provider.get()</code></a>, leaving only <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a>s.</div>
 </dd>
@@ -1332,6 +1349,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/releasablereferences/ReleasableReferenceManager.html#restoreStrongReferences--">restoreStrongReferences()</a></span> - Method in interface dagger.releasablereferences.<a href="dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences">ReleasableReferenceManager</a></dt>
 <dd>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Restores strong references for all providers in this <a href="dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a> that were
  previously <a href="dagger/releasablereferences/ReleasableReferenceManager.html#releaseStrongReferences--">released</a> but whose <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a> has
  not yet been cleared during garbage collection.</div>
@@ -1370,6 +1388,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope()</a></span> - Method in interface dagger.releasablereferences.<a href="dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences">ReleasableReferenceManager</a></dt>
 <dd>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">The scope whose references are managed by this object.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/Scope.html#scopeAnnotation--">scopeAnnotation()</a></span> - Method in class dagger.model.<a href="dagger/model/Scope.html" title="class in dagger.model">Scope</a></dt>
@@ -1497,8 +1516,11 @@
 </dd>
 <dt><a href="dagger/releasablereferences/TypedReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><span class="typeNameLink">TypedReleasableReferenceManager</span></a>&lt;<a href="dagger/releasablereferences/TypedReleasableReferenceManager.html" title="type parameter in TypedReleasableReferenceManager">M</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt; - Interface in <a href="dagger/releasablereferences/package-summary.html">dagger.releasablereferences</a></dt>
 <dd>
-<div class="block">A <a href="dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><code>ReleasableReferenceManager</code></a> for a scope that is annotated with an annotation that itself
- is annotated with <a href="dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><code>CanReleaseReferences</code></a>.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 </dd>
 </dl>
 <a name="I:V">

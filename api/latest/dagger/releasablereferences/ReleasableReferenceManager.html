@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":38,"i1":38,"i2":38};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -103,8 +103,14 @@ var activeTableTab = "activeTableTab";
 <dd><a href="../../dagger/releasablereferences/TypedReleasableReferenceManager.html" title="interface in dagger.releasablereferences">TypedReleasableReferenceManager</a>&lt;M&gt;</dd>
 </dl>
 <hr>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 <br>
 <pre>@Beta
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
 public interface <span class="typeNameLabel">ReleasableReferenceManager</span></pre>
 <div class="block">An object that can <a href="https://google.github.io/dagger/users-guide.html#releasable-references">release or
  restore strong references</a> held in a <a href="../../dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><code>@CanReleaseReferences</code></a> scope.
@@ -162,7 +168,7 @@ public interface <span class="typeNameLabel">ReleasableReferenceManager</span></
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -170,6 +176,7 @@ public interface <span class="typeNameLabel">ReleasableReferenceManager</span></
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#releaseStrongReferences--">releaseStrongReferences</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Releases the strong references held by all providers in this <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a> to the
  objects previously returned by <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true#get--" title="class or interface in javax.inject"><code>Provider.get()</code></a>, leaving only <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a>s.</div>
 </td>
@@ -177,6 +184,7 @@ public interface <span class="typeNameLabel">ReleasableReferenceManager</span></
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#restoreStrongReferences--">restoreStrongReferences</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Restores strong references for all providers in this <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a> that were
  previously <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#releaseStrongReferences--">released</a> but whose <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a> has
  not yet been cleared during garbage collection.</div>
@@ -185,6 +193,7 @@ public interface <span class="typeNameLabel">ReleasableReferenceManager</span></
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">The scope whose references are managed by this object.</div>
 </td>
 </tr>
@@ -210,6 +219,7 @@ public interface <span class="typeNameLabel">ReleasableReferenceManager</span></
 <li class="blockList">
 <h4>scope</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;scope()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">The scope whose references are managed by this object.</div>
 </li>
 </ul>
@@ -220,6 +230,7 @@ public interface <span class="typeNameLabel">ReleasableReferenceManager</span></
 <li class="blockList">
 <h4>releaseStrongReferences</h4>
 <pre>void&nbsp;releaseStrongReferences()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Releases the strong references held by all providers in this <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a> to the
  objects previously returned by <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true#get--" title="class or interface in javax.inject"><code>Provider.get()</code></a>, leaving only <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a>s.
 
@@ -238,6 +249,7 @@ public interface <span class="typeNameLabel">ReleasableReferenceManager</span></
 <li class="blockList">
 <h4>restoreStrongReferences</h4>
 <pre>void&nbsp;restoreStrongReferences()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Restores strong references for all providers in this <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a> that were
  previously <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#releaseStrongReferences--">released</a> but whose <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a> has
  not yet been cleared during garbage collection.</div>

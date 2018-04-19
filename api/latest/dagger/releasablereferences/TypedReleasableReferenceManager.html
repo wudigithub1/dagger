@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":38};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -107,8 +107,14 @@ var activeTableTab = "activeTableTab";
 <dd><a href="../../dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences">ReleasableReferenceManager</a></dd>
 </dl>
 <hr>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">The releasable references feature is deprecated and scheduled for removal in July
+     2018. If you use it or are planning to add usages, please
+     <a href="https://github.com/google/dagger/issues/1117">this bug</a>.</span></div>
+</div>
 <br>
 <pre>@Beta
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
 public interface <span class="typeNameLabel">TypedReleasableReferenceManager&lt;M extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;</span>
 extends <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences">ReleasableReferenceManager</a></pre>
 <div class="block">A <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html" title="interface in dagger.releasablereferences"><code>ReleasableReferenceManager</code></a> for a scope that is annotated with an annotation that itself
@@ -150,7 +156,7 @@ extends <a href="../../dagger/releasablereferences/ReleasableReferenceManager.ht
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -158,6 +164,7 @@ extends <a href="../../dagger/releasablereferences/ReleasableReferenceManager.ht
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../dagger/releasablereferences/TypedReleasableReferenceManager.html" title="type parameter in TypedReleasableReferenceManager">M</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/releasablereferences/TypedReleasableReferenceManager.html#metadata--">metadata</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Returns the annotation on <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#scope--"><code>ReleasableReferenceManager.scope()</code></a> that is annotated with <a href="../../dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><code>CanReleaseReferences</code></a>.</div>
 </td>
 </tr>
@@ -190,6 +197,7 @@ extends <a href="../../dagger/releasablereferences/ReleasableReferenceManager.ht
 <li class="blockList">
 <h4>metadata</h4>
 <pre><a href="../../dagger/releasablereferences/TypedReleasableReferenceManager.html" title="type parameter in TypedReleasableReferenceManager">M</a>&nbsp;metadata()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Returns the annotation on <a href="../../dagger/releasablereferences/ReleasableReferenceManager.html#scope--"><code>ReleasableReferenceManager.scope()</code></a> that is annotated with <a href="../../dagger/releasablereferences/CanReleaseReferences.html" title="annotation in dagger.releasablereferences"><code>CanReleaseReferences</code></a>.</div>
 </li>
 </ul>
