@@ -123,7 +123,7 @@ var activeTableTab = "activeTableTab";
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.BindingNode-java.lang.String-">reportBinding</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/tools/Diagnostic.Kind.html?is-external=true" title="class or interface in javax.tools">Diagnostic.Kind</a>&nbsp;diagnosticKind,
-             <a href="../../dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
+             <a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
 <div class="block">Reports a diagnostic for a binding.</div>
 </td>
@@ -131,7 +131,7 @@ var activeTableTab = "activeTableTab";
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.BindingNode-java.lang.String-java.lang.Object-java.lang.Object...-">reportBinding</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/tools/Diagnostic.Kind.html?is-external=true" title="class or interface in javax.tools">Diagnostic.Kind</a>&nbsp;diagnosticKind,
-             <a href="../../dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
+             <a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;messageFormat,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;firstArg,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;moreArgs)</code>
@@ -225,7 +225,7 @@ void&nbsp;reportComponent(<a href="https://docs.oracle.com/javase/8/docs/api/jav
 <li class="blockList">
 <h4>reportBinding</h4>
 <pre>void&nbsp;reportBinding(<a href="https://docs.oracle.com/javase/8/docs/api/javax/tools/Diagnostic.Kind.html?is-external=true" title="class or interface in javax.tools">Diagnostic.Kind</a>&nbsp;diagnosticKind,
-                   <a href="../../dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
+                   <a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
 <div class="block">Reports a diagnostic for a binding. Includes information about how the binding is reachable
  from entry points.</div>
@@ -239,7 +239,7 @@ void&nbsp;reportComponent(<a href="https://docs.oracle.com/javase/8/docs/api/jav
 <h4>reportBinding</h4>
 <pre>@FormatMethod
 void&nbsp;reportBinding(<a href="https://docs.oracle.com/javase/8/docs/api/javax/tools/Diagnostic.Kind.html?is-external=true" title="class or interface in javax.tools">Diagnostic.Kind</a>&nbsp;diagnosticKind,
-                                 <a href="../../dagger/model/BindingGraph.BindingNode.html" title="class in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
+                                 <a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;messageFormat,
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;firstArg,
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;moreArgs)</pre>
