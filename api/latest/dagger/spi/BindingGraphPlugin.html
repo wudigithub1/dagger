@@ -124,38 +124,38 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>default void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initElements-javax.lang.model.util.Elements-">initElements</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util">Elements</a>&nbsp;elements)</code>
-<div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util"><code>Elements</code></a> instance.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initElements-javax.lang.model.util.Elements-">initElements</a></span>(javax.lang.model.util.Elements&nbsp;elements)</code>
+<div class="block">Initializes this plugin with a <code>Elements</code> instance.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initFiler-javax.annotation.processing.Filer-">initFiler</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Filer.html?is-external=true" title="class or interface in javax.annotation.processing">Filer</a>&nbsp;filer)</code>
-<div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Filer.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Filer</code></a> that it can use to write Java or other files based
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initFiler-javax.annotation.processing.Filer-">initFiler</a></span>(javax.annotation.processing.Filer&nbsp;filer)</code>
+<div class="block">Initializes this plugin with a <code>Filer</code> that it can use to write Java or other files based
  on the binding graph.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>default void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initOptions-java.util.Map-">initOptions</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;options)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initOptions-java.util.Map-">initOptions</a></span>(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;options)</code>
 <div class="block">Initializes this plugin with a filtered view of the options passed on the <code>javac</code>
  command-line for all keys from <a href="../../dagger/spi/BindingGraphPlugin.html#supportedOptions--"><code>supportedOptions()</code></a>.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initTypes-javax.lang.model.util.Types-">initTypes</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util">Types</a>&nbsp;types)</code>
-<div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util"><code>Types</code></a> instance.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#initTypes-javax.lang.model.util.Types-">initTypes</a></span>(javax.lang.model.util.Types&nbsp;types)</code>
+<div class="block">Initializes this plugin with a <code>Types</code> instance.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colFirst"><code>default java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#pluginName--">pluginName</a></span>()</code>
-<div class="block">A distinguishing name of the plugin that will be used in diagnostics printed to the <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Messager.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Messager</code></a>.</div>
+<div class="block">A distinguishing name of the plugin that will be used in diagnostics printed to the <code>Messager</code>.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colFirst"><code>default java.util.Set&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/spi/BindingGraphPlugin.html#supportedOptions--">supportedOptions</a></span>()</code>
 <div class="block">Returns the annotation-processing options that this plugin uses to configure behavior.</div>
 </td>
@@ -200,13 +200,13 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>initFiler</h4>
-<pre>default&nbsp;void&nbsp;initFiler(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Filer.html?is-external=true" title="class or interface in javax.annotation.processing">Filer</a>&nbsp;filer)</pre>
-<div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Filer.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Filer</code></a> that it can use to write Java or other files based
+<pre>default&nbsp;void&nbsp;initFiler(javax.annotation.processing.Filer&nbsp;filer)</pre>
+<div class="block">Initializes this plugin with a <code>Filer</code> that it can use to write Java or other files based
  on the binding graph. This will be called once per instance of this plugin, before any graph is
  <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getFiler--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getFiler()</code></a></dd>
+<dd><code>ProcessingEnvironment.getFiler()</code></dd>
 </dl>
 </li>
 </ul>
@@ -216,12 +216,12 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>initTypes</h4>
-<pre>default&nbsp;void&nbsp;initTypes(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util">Types</a>&nbsp;types)</pre>
-<div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Types.html?is-external=true" title="class or interface in javax.lang.model.util"><code>Types</code></a> instance. This will be called once per instance of
+<pre>default&nbsp;void&nbsp;initTypes(javax.lang.model.util.Types&nbsp;types)</pre>
+<div class="block">Initializes this plugin with a <code>Types</code> instance. This will be called once per instance of
  this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getTypeUtils--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getTypeUtils()</code></a></dd>
+<dd><code>ProcessingEnvironment.getTypeUtils()</code></dd>
 </dl>
 </li>
 </ul>
@@ -231,12 +231,12 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>initElements</h4>
-<pre>default&nbsp;void&nbsp;initElements(<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util">Elements</a>&nbsp;elements)</pre>
-<div class="block">Initializes this plugin with a <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/Elements.html?is-external=true" title="class or interface in javax.lang.model.util"><code>Elements</code></a> instance. This will be called once per instance
+<pre>default&nbsp;void&nbsp;initElements(javax.lang.model.util.Elements&nbsp;elements)</pre>
+<div class="block">Initializes this plugin with a <code>Elements</code> instance. This will be called once per instance
  of this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getTypeUtils--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getTypeUtils()</code></a></dd>
+<dd><code>ProcessingEnvironment.getTypeUtils()</code></dd>
 </dl>
 </li>
 </ul>
@@ -246,13 +246,13 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>initOptions</h4>
-<pre>default&nbsp;void&nbsp;initOptions(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;options)</pre>
+<pre>default&nbsp;void&nbsp;initOptions(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;options)</pre>
 <div class="block">Initializes this plugin with a filtered view of the options passed on the <code>javac</code>
  command-line for all keys from <a href="../../dagger/spi/BindingGraphPlugin.html#supportedOptions--"><code>supportedOptions()</code></a>. This will be called once per
  instance of this plugin, before any graph is <a href="../../dagger/spi/BindingGraphPlugin.html#visitGraph-dagger.model.BindingGraph-dagger.spi.DiagnosticReporter-">visited</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/ProcessingEnvironment.html?is-external=true#getOptions--" title="class or interface in javax.annotation.processing"><code>ProcessingEnvironment.getOptions()</code></a></dd>
+<dd><code>ProcessingEnvironment.getOptions()</code></dd>
 </dl>
 </li>
 </ul>
@@ -262,11 +262,11 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>supportedOptions</h4>
-<pre>default&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;supportedOptions()</pre>
+<pre>default&nbsp;java.util.Set&lt;java.lang.String&gt;&nbsp;supportedOptions()</pre>
 <div class="block">Returns the annotation-processing options that this plugin uses to configure behavior.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html?is-external=true#getSupportedOptions--" title="class or interface in javax.annotation.processing"><code>Processor.getSupportedOptions()</code></a></dd>
+<dd><code>Processor.getSupportedOptions()</code></dd>
 </dl>
 </li>
 </ul>
@@ -276,8 +276,8 @@ var activeTableTab = "activeTableTab";
 <ul class="blockListLast">
 <li class="blockList">
 <h4>pluginName</h4>
-<pre>default&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName()</pre>
-<div class="block">A distinguishing name of the plugin that will be used in diagnostics printed to the <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Messager.html?is-external=true" title="class or interface in javax.annotation.processing"><code>Messager</code></a>. By default, the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true#getCanonicalName--" title="class or interface in java.lang">fully qualified name</a> of the
+<pre>default&nbsp;java.lang.String&nbsp;pluginName()</pre>
+<div class="block">A distinguishing name of the plugin that will be used in diagnostics printed to the <code>Messager</code>. By default, the fully qualified name of the
  plugin is used.</div>
 </li>
 </ul>
@@ -350,6 +350,5 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

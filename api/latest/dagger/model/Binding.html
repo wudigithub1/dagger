@@ -123,19 +123,19 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element">Element</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;? extends javax.lang.model.element.Element&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/Binding.html#bindingElement--">bindingElement</a></span>()</code>
-<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element"><code>Element</code></a> that declares this binding.</div>
+<div class="block">The <code>Element</code> that declares this binding.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element">TypeElement</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;javax.lang.model.element.TypeElement&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/Binding.html#contributingModule--">contributingModule</a></span>()</code>
-<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element"><code>TypeElement</code></a> of the module which contributes this binding.</div>
+<div class="block">The <code>TypeElement</code> of the module which contributes this binding.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/Binding.html#dependencies--">dependencies</a></span>()</code>
 <div class="block">The dependencies of this binding.</div>
 </td>
@@ -165,7 +165,7 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/Binding.html#scope--">scope</a></span>()</code>
 <div class="block">The scope of this binding if it has one.</div>
 </td>
@@ -201,7 +201,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>dependencies</h4>
-<pre><a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/collect/ImmutableSet.html?is-external=true" title="class or interface in com.google.common.collect">ImmutableSet</a>&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;&nbsp;dependencies()</pre>
+<pre>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;&nbsp;dependencies()</pre>
 <div class="block">The dependencies of this binding. The order of the dependencies corresponds to the order in
  which they will be injected when the binding is requested.</div>
 </li>
@@ -212,8 +212,8 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>bindingElement</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element">Element</a>&gt;&nbsp;bindingElement()</pre>
-<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html?is-external=true" title="class or interface in javax.lang.model.element"><code>Element</code></a> that declares this binding. Absent for <a href="../../dagger/model/BindingKind.html" title="enum in dagger.model">binding
+<pre>java.util.Optional&lt;? extends javax.lang.model.element.Element&gt;&nbsp;bindingElement()</pre>
+<div class="block">The <code>Element</code> that declares this binding. Absent for <a href="../../dagger/model/BindingKind.html" title="enum in dagger.model">binding
  kinds</a> that are not always declared by exactly one element.
 
  <p>For example, consider <a href="../../dagger/model/BindingKind.html#MULTIBOUND_SET"><code>BindingKind.MULTIBOUND_SET</code></a>. A component with many
@@ -229,8 +229,8 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>contributingModule</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element">TypeElement</a>&gt;&nbsp;contributingModule()</pre>
-<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/TypeElement.html?is-external=true" title="class or interface in javax.lang.model.element"><code>TypeElement</code></a> of the module which contributes this binding. Absent for bindings that
+<pre>java.util.Optional&lt;javax.lang.model.element.TypeElement&gt;&nbsp;contributingModule()</pre>
+<div class="block">The <code>TypeElement</code> of the module which contributes this binding. Absent for bindings that
  have no <a href="../../dagger/model/Binding.html#bindingElement--"><code>binding element</code></a>.</div>
 </li>
 </ul>
@@ -240,7 +240,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>scope</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;&nbsp;scope()</pre>
+<pre>java.util.Optional&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;&nbsp;scope()</pre>
 <div class="block">The scope of this binding if it has one.</div>
 </li>
 </ul>
@@ -343,6 +343,5 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

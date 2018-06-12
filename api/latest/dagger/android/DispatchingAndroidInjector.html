@@ -96,7 +96,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
 <li>dagger.android.DispatchingAndroidInjector&lt;T&gt;</li>
@@ -118,11 +118,11 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>@Beta
 public final class <span class="typeNameLabel">DispatchingAndroidInjector&lt;T&gt;</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+extends java.lang.Object
 implements <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;T&gt;</pre>
-<div class="block">Performs members-injection on instances of core Android types (e.g. <a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>, <a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app"><code>Fragment</code></a>) that are constructed by the Android framework and not by Dagger. This class relies on
+<div class="block">Performs members-injection on instances of core Android types (e.g. <code>Activity</code>, <code>Fragment</code>) that are constructed by the Android framework and not by Dagger. This class relies on
  an injected mapping from each concrete class to an <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a> for an <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of that class. Each concrete class must have its own entry in the map, even if
- it extends another class which is already present in the map. Calls <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang"><code>Object.getClass()</code></a> on
+ it extends another class which is already present in the map. Calls <code>Object.getClass()</code> on
  the instance in order to find the appropriate <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a>.</div>
 </li>
 </ul>
@@ -188,8 +188,8 @@ implements <a href="../../dagger/android/AndroidInjector.html" title="interface 
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -240,7 +240,7 @@ public&nbsp;boolean&nbsp;maybeInject(<a href="../../dagger/android/DispatchingAn
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../dagger/android/DispatchingAndroidInjector.InvalidInjectorBindingException.html" title="class in dagger.android">DispatchingAndroidInjector.InvalidInjectorBindingException</a></code> - if the injector factory bound for a class does not
      inject instances of that class</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if no <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a> is bound for <code>instance</code></dd>
+<dd><code>java.lang.IllegalArgumentException</code> - if no <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a> is bound for <code>instance</code></dd>
 </dl>
 </li>
 </ul>
@@ -313,6 +313,5 @@ public&nbsp;boolean&nbsp;maybeInject(<a href="../../dagger/android/DispatchingAn
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

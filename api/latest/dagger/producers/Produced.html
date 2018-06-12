@@ -96,7 +96,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
 <li>dagger.producers.Produced&lt;T&gt;</li>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <pre>@Beta
  @CheckReturnValue
 public abstract class <span class="typeNameLabel">Produced&lt;T&gt;</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends java.lang.Object</pre>
 <div class="block">An interface that represents the result of a <a href="../../dagger/producers/Producer.html" title="interface in dagger.producers">production</a> of type <code>T</code>,
  or an exception that was thrown during that production. For any type <code>T</code> that can be
  injected, you can also inject <code>Produced&lt;T&gt;</code>, which enables handling of any exceptions that
@@ -152,14 +152,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>abstract boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/Produced.html#equals-java.lang.Object-">equals</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/Produced.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>
 <div class="block">Two <code>Produced</code> objects compare equal if both are successful with equal values, or both
  are failed with equal exceptions.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../dagger/producers/Produced.html" title="class in dagger.producers">Produced</a>&lt;T&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/Produced.html#failed-java.lang.Throwable-">failed</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;throwable)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/Produced.html#failed-java.lang.Throwable-">failed</a></span>(java.lang.Throwable&nbsp;throwable)</code>
 <div class="block">Returns a failed <code>Produced</code>, whose <a href="../../dagger/producers/Produced.html#get--"><code>get()</code></a> will throw an
  <code>ExecutionException</code> with the given cause.</div>
 </td>
@@ -187,8 +187,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -211,11 +211,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>get</h4>
 <pre>public abstract&nbsp;<a href="../../dagger/producers/Produced.html" title="type parameter in Produced">T</a>&nbsp;get()
-               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></pre>
+               throws java.util.concurrent.ExecutionException</pre>
 <div class="block">Returns the result of a production.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></code> - if the production threw an exception</dd>
+<dd><code>java.util.concurrent.ExecutionException</code> - if the production threw an exception</dd>
 </dl>
 </li>
 </ul>
@@ -225,12 +225,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>equals</h4>
-<pre>public abstract&nbsp;boolean&nbsp;equals(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<pre>public abstract&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
 <div class="block">Two <code>Produced</code> objects compare equal if both are successful with equal values, or both
  are failed with equal exceptions.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>
@@ -244,7 +244,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns an appropriate hash code to match <a href="../../dagger/producers/Produced.html#equals-java.lang.Object-"><code>equals(Object)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>
@@ -267,7 +267,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>failed</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="../../dagger/producers/Produced.html" title="class in dagger.producers">Produced</a>&lt;T&gt;&nbsp;failed(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;throwable)</pre>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;<a href="../../dagger/producers/Produced.html" title="class in dagger.producers">Produced</a>&lt;T&gt;&nbsp;failed(java.lang.Throwable&nbsp;throwable)</pre>
 <div class="block">Returns a failed <code>Produced</code>, whose <a href="../../dagger/producers/Produced.html#get--"><code>get()</code></a> will throw an
  <code>ExecutionException</code> with the given cause.</div>
 </li>
@@ -341,6 +341,5 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

@@ -96,7 +96,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
 <li>dagger.android.support.AndroidSupportInjection</li>
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>@Beta
 public final class <span class="typeNameLabel">AndroidSupportInjection</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends java.lang.Object</pre>
 <div class="block">Injects core Android types from support libraries.</div>
 </li>
 </ul>
@@ -132,9 +132,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/android/support/AndroidSupportInjection.html#inject-android.support.v4.app.Fragment-">inject</a></span>(<a href="https://developer.android.com/reference/android/support.v4.app.Fragment.html?is-external=true" title="class or interface in android">android.support.v4.app.Fragment</a>&nbsp;fragment)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/android/support/AndroidSupportInjection.html#inject-android.support.v4.app.Fragment-">inject</a></span>(android.support.v4.app.Fragment&nbsp;fragment)</code>
 <div class="block">Injects <code>fragment</code> if an associated <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation
- can be found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+ can be found, otherwise throws an <code>IllegalArgumentException</code>.</div>
 </td>
 </tr>
 </table>
@@ -142,8 +142,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -165,9 +165,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>inject</h4>
-<pre>public static&nbsp;void&nbsp;inject(<a href="https://developer.android.com/reference/android/support.v4.app.Fragment.html?is-external=true" title="class or interface in android">android.support.v4.app.Fragment</a>&nbsp;fragment)</pre>
+<pre>public static&nbsp;void&nbsp;inject(android.support.v4.app.Fragment&nbsp;fragment)</pre>
 <div class="block">Injects <code>fragment</code> if an associated <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation
- can be found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.
+ can be found, otherwise throws an <code>IllegalArgumentException</code>.
 
  <p>Uses the following algorithm to find the appropriate <code>AndroidInjector&lt;Fragment&gt;</code> to
  use to inject <code>fragment</code>:
@@ -176,13 +176,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
    <li>Walks the parent-fragment hierarchy to find the a fragment that implements <a href="../../../dagger/android/support/HasSupportFragmentInjector.html" title="interface in dagger.android.support"><code>HasSupportFragmentInjector</code></a>, and if none do
    <li>Uses the <code>fragment</code>'s <code>activity</code> if it implements
        <a href="../../../dagger/android/support/HasSupportFragmentInjector.html" title="interface in dagger.android.support"><code>HasSupportFragmentInjector</code></a>, and if not
-   <li>Uses the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> if it implements <a href="../../../dagger/android/support/HasSupportFragmentInjector.html" title="interface in dagger.android.support"><code>HasSupportFragmentInjector</code></a>.
+   <li>Uses the <code>Application</code> if it implements <a href="../../../dagger/android/support/HasSupportFragmentInjector.html" title="interface in dagger.android.support"><code>HasSupportFragmentInjector</code></a>.
  </ol>
 
- If none of them implement <a href="../../../dagger/android/support/HasSupportFragmentInjector.html" title="interface in dagger.android.support"><code>HasSupportFragmentInjector</code></a>, a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a> is thrown.</div>
+ If none of them implement <a href="../../../dagger/android/support/HasSupportFragmentInjector.html" title="interface in dagger.android.support"><code>HasSupportFragmentInjector</code></a>, a <code>IllegalArgumentException</code> is thrown.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if no parent fragment, activity, or application implements
+<dd><code>java.lang.IllegalArgumentException</code> - if no parent fragment, activity, or application implements
      <a href="../../../dagger/android/support/HasSupportFragmentInjector.html" title="interface in dagger.android.support"><code>HasSupportFragmentInjector</code></a>.</dd>
 </dl>
 </li>
@@ -256,6 +256,5 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

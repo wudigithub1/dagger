@@ -92,14 +92,14 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
- <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject">@Qualifier</a>
+<pre>@Documented
+ @Retention(value=RUNTIME)
+ @Qualifier
  @Beta
 public @interface <span class="memberNameLabel">Production</span></pre>
 <div class="block">Qualifies a type that will be provided to the framework for use internally.
 
- <p>The only type that may be so qualified is <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent"><code>Executor</code></a>. In this case,
+ <p>The only type that may be so qualified is <code>Executor</code>. In this case,
  the resulting executor is used to schedule <a href="../../dagger/producers/Produces.html" title="annotation in dagger.producers">producer methods</a> in a
  <a href="../../dagger/producers/ProductionComponent.html" title="annotation in dagger.producers"><code>ProductionComponent</code></a> or <a href="../../dagger/producers/ProductionSubcomponent.html" title="annotation in dagger.producers"><code>ProductionSubcomponent</code></a>.</div>
 </li>
@@ -167,6 +167,5 @@ public @interface <span class="memberNameLabel">Production</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

@@ -92,7 +92,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>)
+<pre>@Target(value=METHOD)
 public @interface <span class="memberNameLabel">ContributesAndroidInjector</span></pre>
 <div class="block">Generates an <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> for the return type of this method. The injector is
  implemented with a <a href="../../dagger/Subcomponent.html" title="annotation in dagger"><code>Subcomponent</code></a> and will be a child of the <a href="../../dagger/Module.html" title="annotation in dagger"><code>Module</code></a>'s
@@ -121,7 +121,7 @@ public @interface <span class="memberNameLabel">ContributesAndroidInjector</span
 <th class="colLast" scope="col">Optional Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/ContributesAndroidInjector.html#modules--">modules</a></span></code>
 <div class="block">Modules to be installed in the generated <a href="../../dagger/Subcomponent.html" title="annotation in dagger"><code>Subcomponent</code></a>.</div>
 </td>
@@ -147,7 +147,7 @@ public @interface <span class="memberNameLabel">ContributesAndroidInjector</span
 <ul class="blockListLast">
 <li class="blockList">
 <h4>modules</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;modules</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;modules</pre>
 <div class="block">Modules to be installed in the generated <a href="../../dagger/Subcomponent.html" title="annotation in dagger"><code>Subcomponent</code></a>.</div>
 <dl>
 <dt>Default:</dt>
@@ -222,6 +222,5 @@ public @interface <span class="memberNameLabel">ContributesAndroidInjector</span
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

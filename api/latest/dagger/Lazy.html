@@ -146,7 +146,7 @@ var activeTableTab = "activeTableTab";
  </code></pre>
 
  <h3>Provider Injection</h3>
- This class injects a <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true" title="class or interface in javax.inject">provider</a> for the
+ This class injects a provider for the
  integer. It calls <code>Provider.get()</code> 3 times and prints each result:
  <pre><code>
    final class ProviderCounter {
@@ -222,7 +222,7 @@ var activeTableTab = "activeTableTab";
    101
    101
  </code></pre>
- Use <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Singleton.html?is-external=true" title="class or interface in javax.inject"><code>@Singleton</code></a> to share one instance among all
+ Use <code>@Singleton</code> to share one instance among all
  clients, and <code>Lazy</code> for lazy computation in a single client.</div>
 </li>
 </ul>
@@ -343,6 +343,5 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

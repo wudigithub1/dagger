@@ -92,9 +92,9 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#TYPE" title="class or interface in java.lang.annotation">TYPE</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
+<pre>@Retention(value=RUNTIME)
+ @Target(value=TYPE)
+ @Documented
 public @interface <span class="memberNameLabel">Component</span></pre>
 <div class="block">Annotates an interface or abstract class for which a fully-formed, dependency-injected
  implementation is to be generated from a set of <a href="../dagger/Component.html#modules--">modules()</a>. The generated class will
@@ -107,22 +107,22 @@ public @interface <span class="memberNameLabel">Component</span></pre>
 
  <p>Every type annotated with <code>@Component</code> must contain at least one abstract component
  method. Component methods may have any name, but must have signatures that conform to either
- <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true" title="class or interface in javax.inject">provision</a> or <a href="../dagger/MembersInjector.html" title="interface in dagger">members-injection</a> contracts.
+ provision or <a href="../dagger/MembersInjector.html" title="interface in dagger">members-injection</a> contracts.
 
  <a name="provision-methods"></a>
  <h3>Provision methods</h3>
 
- <p>Provision methods have no parameters and return an <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>injected</code></a> or
- <a href="../dagger/Provides.html" title="annotation in dagger"><code>provided</code></a> type. Each method may have a <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject"><code>Qualifier</code></a> annotation as well. The
+ <p>Provision methods have no parameters and return an <code>injected</code> or
+ <a href="../dagger/Provides.html" title="annotation in dagger"><code>provided</code></a> type. Each method may have a <code>Qualifier</code> annotation as well. The
  following are all valid provision method declarations: <pre><code>
    SomeType getSomeType();
     Set&lt;SomeType&gt; getSomeTypes();
     @PortNumber int getPortNumber();
  </code></pre>
 
- <p>Provision methods, like typical <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>injection</code></a> sites, may use <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true" title="class or interface in javax.inject"><code>Provider</code></a> or
- <a href="../dagger/Lazy.html" title="interface in dagger"><code>Lazy</code></a> to more explicitly control provision requests. A <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true" title="class or interface in javax.inject"><code>Provider</code></a> allows the user
- of the component to request provision any number of times by calling <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Provider.html?is-external=true#get--" title="class or interface in javax.inject"><code>Provider.get()</code></a>. A
+ <p>Provision methods, like typical <code>injection</code> sites, may use <code>Provider</code> or
+ <a href="../dagger/Lazy.html" title="interface in dagger"><code>Lazy</code></a> to more explicitly control provision requests. A <code>Provider</code> allows the user
+ of the component to request provision any number of times by calling <code>Provider.get()</code>. A
  <a href="../dagger/Lazy.html" title="interface in dagger"><code>Lazy</code></a> will only ever request a single provision, but will defer it until the first call to
  <a href="../dagger/Lazy.html#get--"><code>Lazy.get()</code></a>. The following provision methods all request provision of the same type, but
  each implies different semantics: <pre><code>
@@ -135,7 +135,7 @@ public @interface <span class="memberNameLabel">Component</span></pre>
  <h3>Members-injection methods</h3>
 
  <p>Members-injection methods have a single parameter and inject dependencies into each of the
- <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>Inject</code></a>-annotated fields and methods of the passed instance. A members-injection method
+ <code>Inject</code>-annotated fields and methods of the passed instance. A members-injection method
  may be void or return its single parameter as a convenience for chaining. The following are all
  valid members-injection method declarations: <pre><code>
    void injectSomeType(SomeType someType);
@@ -151,7 +151,7 @@ public @interface <span class="memberNameLabel">Component</span></pre>
  <h4>A note about covariance</h4>
 
  <p>While a members-injection method for a type will accept instances of its subtypes, only
- <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>Inject</code></a>-annotated members of the parameter type and its supertypes will be injected;
+ <code>Inject</code>-annotated members of the parameter type and its supertypes will be injected;
  members of subtypes will not. For example, given the following types, only <code>a</code> and
  <code>b</code> will be injected into an instance of <code>Child</code> when it is passed to the
  members-injection method <code>injectSelf(Self instance)</code>: <pre><code>
@@ -205,7 +205,7 @@ public @interface <span class="memberNameLabel">Component</span></pre>
  <h2>Scope</h2>
 
  <p>Each Dagger component can be associated with a scope by annotating it with the
- <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Scope.html?is-external=true" title="class or interface in javax.inject">scope annotation</a>. The component implementation ensures that there is only one
+ scope annotation. The component implementation ensures that there is only one
  provision of each scoped binding per instance of the component. If the component declares a
  scope, it may only contain unscoped bindings or bindings of that scope anywhere in the graph. For
  example: <pre><code>
@@ -216,7 +216,7 @@ public @interface <span class="memberNameLabel">Component</span></pre>
  </code></pre>
 
  <p>In order to get the proper behavior associated with a scope annotation, it is the caller's
- responsibility to instantiate new component instances when appropriate. A <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Singleton.html?is-external=true" title="class or interface in javax.inject"><code>Singleton</code></a>
+ responsibility to instantiate new component instances when appropriate. A <code>Singleton</code>
  component, for instance, should only be instantiated once per application, while a
  <code>RequestScoped</code> component should be instantiated once per request. Because components are
  self-contained implementations, exiting a scope is as simple as dropping all references to the
@@ -288,14 +288,14 @@ public @interface <span class="memberNameLabel">Component</span></pre>
 <th class="colLast" scope="col">Optional Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../dagger/Component.html#dependencies--">dependencies</a></span></code>
 <div class="block">A list of types that are to be used as <a href="#component-dependencies">component
  dependencies</a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../dagger/Component.html#modules--">modules</a></span></code>
 <div class="block">A list of classes annotated with <a href="../dagger/Module.html" title="annotation in dagger"><code>Module</code></a> whose bindings are used to generate the
  component implementation.</div>
@@ -322,7 +322,7 @@ public @interface <span class="memberNameLabel">Component</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>modules</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;modules</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;modules</pre>
 <div class="block">A list of classes annotated with <a href="../dagger/Module.html" title="annotation in dagger"><code>Module</code></a> whose bindings are used to generate the
  component implementation. Note that through the use of <a href="../dagger/Module.html#includes--"><code>Module.includes()</code></a> the full set of
  modules used to implement the component may include more modules that just those listed here.</div>
@@ -341,7 +341,7 @@ public @interface <span class="memberNameLabel">Component</span></pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>dependencies</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;dependencies</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;dependencies</pre>
 <div class="block">A list of types that are to be used as <a href="#component-dependencies">component
  dependencies</a>.</div>
 <dl>
@@ -417,6 +417,5 @@ public @interface <span class="memberNameLabel">Component</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

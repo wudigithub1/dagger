@@ -94,10 +94,10 @@
 <br>
 <pre>@Beta
  <a href="../../dagger/MapKey.html" title="annotation in dagger">@MapKey</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>)
+ @Documented
+ @Target(value=METHOD)
 public @interface <span class="memberNameLabel">BroadcastReceiverKey</span></pre>
-<div class="block"><a href="../../dagger/MapKey.html" title="annotation in dagger"><code>MapKey</code></a> annotation to key bindings by a type of a <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a>.</div>
+<div class="block"><a href="../../dagger/MapKey.html" title="annotation in dagger"><code>MapKey</code></a> annotation to key bindings by a type of a <code>BroadcastReceiver</code>.</div>
 </li>
 </ul>
 </div>
@@ -117,7 +117,7 @@ public @interface <span class="memberNameLabel">BroadcastReceiverKey</span></pre
 <th class="colLast" scope="col">Required Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a>&gt;</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;? extends android.content.BroadcastReceiver&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/BroadcastReceiverKey.html#value--">value</a></span></code>&nbsp;</td>
 </tr>
 </table>
@@ -141,7 +141,7 @@ public @interface <span class="memberNameLabel">BroadcastReceiverKey</span></pre
 <ul class="blockListLast">
 <li class="blockList">
 <h4>value</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a>&gt;&nbsp;value</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;? extends android.content.BroadcastReceiver&gt;&nbsp;value</pre>
 </li>
 </ul>
 </li>
@@ -211,6 +211,5 @@ public @interface <span class="memberNameLabel">BroadcastReceiverKey</span></pre
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

@@ -92,9 +92,9 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#TYPE" title="class or interface in java.lang.annotation">TYPE</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
+<pre>@Documented
+ @Target(value=TYPE)
+ @Retention(value=RUNTIME)
  @Beta
 public @interface <span class="memberNameLabel">ProducerModule</span></pre>
 <div class="block">Annotates a class that contributes <a href="../../dagger/producers/Produces.html" title="annotation in dagger.producers"><code>Produces</code></a> bindings to the production component.</div>
@@ -121,14 +121,14 @@ public @interface <span class="memberNameLabel">ProducerModule</span></pre>
 <th class="colLast" scope="col">Optional Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/ProducerModule.html#includes--">includes</a></span></code>
 <div class="block">Additional <code>@ProducerModule</code>- or <a href="../../dagger/Module.html" title="annotation in dagger"><code>Module</code></a>-annotated classes from which this module
  is composed.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/ProducerModule.html#subcomponents--">subcomponents</a></span></code>
 <div class="block">Any <a href="../../dagger/Subcomponent.html" title="annotation in dagger"><code>Subcomponent</code></a>- or <a href="../../dagger/producers/ProductionSubcomponent.html" title="annotation in dagger.producers"><code>ProductionSubcomponent</code></a>-annotated classes which
  should be children of the component in which this module is installed.</div>
@@ -155,7 +155,7 @@ public @interface <span class="memberNameLabel">ProducerModule</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>includes</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;includes</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;includes</pre>
 <div class="block">Additional <code>@ProducerModule</code>- or <a href="../../dagger/Module.html" title="annotation in dagger"><code>Module</code></a>-annotated classes from which this module
  is composed. The de-duplicated contributions of the modules in <code>includes</code>, and of their
  inclusions recursively, are all contributed to the object graph.</div>
@@ -174,7 +174,7 @@ public @interface <span class="memberNameLabel">ProducerModule</span></pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>subcomponents</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;subcomponents</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;subcomponents</pre>
 <div class="block">Any <a href="../../dagger/Subcomponent.html" title="annotation in dagger"><code>Subcomponent</code></a>- or <a href="../../dagger/producers/ProductionSubcomponent.html" title="annotation in dagger.producers"><code>ProductionSubcomponent</code></a>-annotated classes which
  should be children of the component in which this module is installed. A subcomponent may be
  listed in more than one module in a component.</div>
@@ -255,6 +255,5 @@ public @interface <span class="memberNameLabel">ProducerModule</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

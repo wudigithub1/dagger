@@ -92,13 +92,13 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
+<pre>@Documented
+ @Target(value=METHOD)
+ @Retention(value=RUNTIME)
  @Beta
 public @interface <span class="memberNameLabel">Produces</span></pre>
 <div class="block">Annotates methods of a producer module to create a production binding. If the method returns a
- <a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/util/concurrent/ListenableFuture.html?is-external=true" title="class or interface in com.google.common.util.concurrent"><code>ListenableFuture</code></a> or <a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/util/concurrent/FluentFuture.html?is-external=true" title="class or interface in com.google.common.util.concurrent"><code>FluentFuture</code></a>, then the parameter type of the future is bound
+ <code>ListenableFuture</code> or <code>FluentFuture</code>, then the parameter type of the future is bound
  to the value that the future produces; otherwise, the return type is bound to the returned value.
  The production component will pass dependencies to the method as parameters.</div>
 <dl>
@@ -170,6 +170,5 @@ public @interface <span class="memberNameLabel">Produces</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

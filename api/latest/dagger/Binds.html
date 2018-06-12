@@ -92,12 +92,12 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>)
+<pre>@Documented
+ @Retention(value=RUNTIME)
+ @Target(value=METHOD)
 public @interface <span class="memberNameLabel">Binds</span></pre>
 <div class="block">Annotates <em>abstract</em> methods of a <a href="../dagger/Module.html" title="annotation in dagger"><code>Module</code></a> that delegate bindings. For example, to
- bind <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> to <a href="https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security"><code>SecureRandom</code></a> a module could declare the
+ bind <code>Random</code> to <code>SecureRandom</code> a module could declare the
  following: <code>@Binds abstract Random bindRandom(SecureRandom secureRandom);</code>
 
  <p><code>@Binds</code> methods are a drop-in replacement for <a href="../dagger/Provides.html" title="annotation in dagger"><code>Provides</code></a> methods that simply
@@ -108,8 +108,8 @@ public @interface <span class="memberNameLabel">Binds</span></pre>
 
  <ul>
    <li>Must be <code>abstract</code>.
-   <li>May be <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Scope.html?is-external=true" title="class or interface in javax.inject">scoped</a>.
-   <li>May be <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject">qualified</a>.
+   <li>May be scoped.
+   <li>May be qualified.
    <li>Must have a single parameter whose type is assignable to the return type. The return type
        declares the bound type (just as it would for a @<a href="../dagger/Provides.html" title="annotation in dagger"><code>Provides</code></a> method)
        and the parameter is the type to which it is bound.
@@ -117,15 +117,15 @@ public @interface <span class="memberNameLabel">Binds</span></pre>
        ways:
        <dl>
          <dt><a href="../dagger/multibindings/IntoSet.html" title="annotation in dagger.multibindings"><code>IntoSet</code></a>
-         <dd>The parameter must be assignable to the only parameter of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true#add-E-" title="class or interface in java.util"><code>Set.add(E)</code></a>
+         <dd>The parameter must be assignable to the only parameter of <code>Set.add(E)</code>
              when viewed as a member of the return type — the parameter must be assignable to the
              return type.
          <dt><a href="../dagger/multibindings/ElementsIntoSet.html" title="annotation in dagger.multibindings"><code>ElementsIntoSet</code></a>
-         <dd>The parameter must be assignable to the only parameter of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true#addAll-java.util.Collection-" title="class or interface in java.util"><code>Set.addAll(java.util.Collection&lt;? extends E&gt;)</code></a> when viewed as a member of the return type — if the return type
+         <dd>The parameter must be assignable to the only parameter of <code>Set.addAll(java.util.Collection&lt;? extends E&gt;)</code> when viewed as a member of the return type — if the return type
              is <code>Set&lt;E&gt;</code>, the parameter must be assignable to <code>Collection&lt;? extends
              E&gt;</code>.
          <dt><a href="../dagger/multibindings/IntoMap.html" title="annotation in dagger.multibindings"><code>IntoMap</code></a>
-         <dd>The parameter must be assignable to the <code>value</code> parameter of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#put-K-V-" title="class or interface in java.util"><code>Map.put(K, V)</code></a> when viewed as a member of a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><code>Map</code></a> in which <code>V</code> is bound to the return type — the parameter must be assignable to the return type
+         <dd>The parameter must be assignable to the <code>value</code> parameter of <code>Map.put(K, V)</code> when viewed as a member of a <code>Map</code> in which <code>V</code> is bound to the return type — the parameter must be assignable to the return type
        </dl>
  </ul></div>
 </li>
@@ -193,6 +193,5 @@ public @interface <span class="memberNameLabel">Binds</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

@@ -92,8 +92,8 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#TYPE" title="class or interface in java.lang.annotation">TYPE</a>)
+<pre>@Documented
+ @Target(value=TYPE)
  @Beta
 public @interface <span class="memberNameLabel">ProductionComponent</span></pre>
 <div class="block">Annotates an interface or abstract class for which a fully-formed, dependency-injected
@@ -111,9 +111,9 @@ public @interface <span class="memberNameLabel">ProductionComponent</span></pre>
  <p>Every type annotated with <code>@ProductionComponent</code> must contain at least one abstract
  component method. Component methods must represent <a href="../../dagger/producers/Producer.html" title="interface in dagger.producers">production</a>.
 
- Production methods have no arguments and return either a <a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/util/concurrent/ListenableFuture.html?is-external=true" title="class or interface in com.google.common.util.concurrent"><code>ListenableFuture</code></a> or
- <a href="../../dagger/producers/Producer.html" title="interface in dagger.producers"><code>Producer</code></a> of a type that is <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>injected</code></a>, <a href="../../dagger/Provides.html" title="annotation in dagger"><code>provided</code></a>, or
- <a href="../../dagger/producers/Produces.html" title="annotation in dagger.producers"><code>produced</code></a>. Each may have a <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject"><code>Qualifier</code></a> annotation as well. The following
+ Production methods have no arguments and return either a <code>ListenableFuture</code> or
+ <a href="../../dagger/producers/Producer.html" title="interface in dagger.producers"><code>Producer</code></a> of a type that is <code>injected</code>, <a href="../../dagger/Provides.html" title="annotation in dagger"><code>provided</code></a>, or
+ <a href="../../dagger/producers/Produces.html" title="annotation in dagger.producers"><code>produced</code></a>. Each may have a <code>Qualifier</code> annotation as well. The following
  are all valid production method declarations: <pre><code>
     ListenableFuture&lt;SomeType&gt; getSomeType();
     Producer&lt;Set&lt;SomeType&gt;&gt; getSomeTypes();
@@ -130,13 +130,13 @@ public @interface <span class="memberNameLabel">ProductionComponent</span></pre>
 
  <p>If a non-execution exception is thrown (e.g., an <code>InterruptedException</code> or
  <code>CancellationException</code>), then exception is handled as in
- <a href="https://google.github.io/guava/releases/23.3-jre/api/docs/com/google/common/util/concurrent/Futures.html?is-external=true#transform-com.google.common.util.concurrent.ListenableFuture-com.google.common.base.Function-" title="class or interface in com.google.common.util.concurrent"><code>Futures.transform(com.google.common.util.concurrent.ListenableFuture&lt;I&gt;, com.google.common.base.Function&lt;? super I, ? extends O&gt;)</code></a>.
+ <code>Futures.transform(com.google.common.util.concurrent.ListenableFuture&lt;I&gt;, com.google.common.base.Function&lt;? super I, ? extends O&gt;)</code>.
  <!-- TODO(beder): Explain this more thoroughly, and update the javadocs of those utilities. -->
 
  <h2>Executor</h2>
 
  <p>The component must include a binding for <code>@<a href="../../dagger/producers/Production.html" title="annotation in dagger.producers"><code>Production</code></a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent"><code>Executor</code></a></code>; this binding will be called exactly once, and the
+ <code>Executor</code></code>; this binding will be called exactly once, and the
  provided executor will be used by the framework to schedule all producer methods (for this
  component, and any <a href="../../dagger/producers/ProductionSubcomponent.html" title="annotation in dagger.producers"><code>ProductionSubcomponent</code></a> it may have.</div>
 <dl>
@@ -162,13 +162,13 @@ public @interface <span class="memberNameLabel">ProductionComponent</span></pre>
 <th class="colLast" scope="col">Optional Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/ProductionComponent.html#dependencies--">dependencies</a></span></code>
 <div class="block">A list of types that are to be used as component dependencies.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/ProductionComponent.html#modules--">modules</a></span></code>
 <div class="block">A list of classes annotated with <a href="../../dagger/Module.html" title="annotation in dagger"><code>Module</code></a> or <a href="../../dagger/producers/ProducerModule.html" title="annotation in dagger.producers"><code>ProducerModule</code></a> whose bindings are
  used to generate the component implementation.</div>
@@ -195,7 +195,7 @@ public @interface <span class="memberNameLabel">ProductionComponent</span></pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>modules</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;modules</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;modules</pre>
 <div class="block">A list of classes annotated with <a href="../../dagger/Module.html" title="annotation in dagger"><code>Module</code></a> or <a href="../../dagger/producers/ProducerModule.html" title="annotation in dagger.producers"><code>ProducerModule</code></a> whose bindings are
  used to generate the component implementation.</div>
 <dl>
@@ -213,7 +213,7 @@ public @interface <span class="memberNameLabel">ProductionComponent</span></pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>dependencies</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;dependencies</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;dependencies</pre>
 <div class="block">A list of types that are to be used as component dependencies.</div>
 <dl>
 <dt>Default:</dt>
@@ -288,6 +288,5 @@ public @interface <span class="memberNameLabel">ProductionComponent</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

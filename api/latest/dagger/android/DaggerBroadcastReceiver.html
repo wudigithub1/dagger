@@ -96,10 +96,10 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">android.content.BroadcastReceiver</a></li>
+<li>android.content.BroadcastReceiver</li>
 <li>
 <ul class="inheritance">
 <li>dagger.android.DaggerBroadcastReceiver</li>
@@ -115,15 +115,15 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>@Beta
 public abstract class <span class="typeNameLabel">DaggerBroadcastReceiver</span>
-extends <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a></pre>
-<div class="block">A <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> that injects its members in every call to <a href="../../dagger/android/DaggerBroadcastReceiver.html#onReceive-android.content.Context-android.content.Intent-"><code>onReceive(Context,
+extends android.content.BroadcastReceiver</pre>
+<div class="block">A <code>BroadcastReceiver</code> that injects its members in every call to <a href="../../dagger/android/DaggerBroadcastReceiver.html#onReceive-android.content.Context-android.content.Intent-"><code>onReceive(Context,
  Intent)</code></a>.
 
- <p>This class should only be used for <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a>s that are declared in an <code>AndroidManifest.xml</code>. If, instead, the <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> is created in code, prefer
+ <p>This class should only be used for <code>BroadcastReceiver</code>s that are declared in an <code>AndroidManifest.xml</code>. If, instead, the <code>BroadcastReceiver</code> is created in code, prefer
  constructor injection.
 
- <p>Note: this class is <em>not thread safe</em> and should not be used with multiple <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os"><code>Handler</code></a>s in calls to <a href="https://developer.android.com/reference/android/content/Context.html?is-external=true#registerReceiver-android.content.BroadcastReceiver-android.content.IntentFilter-java.lang.String-android.os.Handler-" title="class or interface in android.content"><code>Context.registerReceiver(BroadcastReceiver,
- android.content.IntentFilter, String, android.os.Handler)</code></a>. Injection is performed on each
+ <p>Note: this class is <em>not thread safe</em> and should not be used with multiple <code>Handler</code>s in calls to <code>Context.registerReceiver(BroadcastReceiver,
+ android.content.IntentFilter, String, android.os.Handler)</code>. Injection is performed on each
  invocation to <a href="../../dagger/android/DaggerBroadcastReceiver.html#onReceive-android.content.Context-android.content.Intent-"><code>onReceive(Context, Intent)</code></a> which could result in inconsistent views of
  injected dependencies across threads.
 
@@ -144,8 +144,8 @@ extends <a href="https://developer.android.com/reference/android/content/Broadca
 <li class="blockList"><a name="nested.classes.inherited.from.class.android.content.BroadcastReceiver">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from class&nbsp;android.content.<a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a></h3>
-<code><a href="https://developer.android.com/reference/android/content/BroadcastReceiver.PendingResult.html?is-external=true" title="class or interface in android.content">BroadcastReceiver.PendingResult</a></code></li>
+<h3>Nested classes/interfaces inherited from class&nbsp;android.content.BroadcastReceiver</h3>
+<code>android.content.BroadcastReceiver.PendingResult</code></li>
 </ul>
 </li>
 </ul>
@@ -180,23 +180,23 @@ extends <a href="https://developer.android.com/reference/android/content/Broadca
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/DaggerBroadcastReceiver.html#onReceive-android.content.Context-android.content.Intent-">onReceive</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
-         <a href="https://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;intent)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/DaggerBroadcastReceiver.html#onReceive-android.content.Context-android.content.Intent-">onReceive</a></span>(android.content.Context&nbsp;context,
+         android.content.Intent&nbsp;intent)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.android.content.BroadcastReceiver">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;android.content.<a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a></h3>
-<code><a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#abortBroadcast--" title="class or interface in android.content">abortBroadcast</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#clearAbortBroadcast--" title="class or interface in android.content">clearAbortBroadcast</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#getAbortBroadcast--" title="class or interface in android.content">getAbortBroadcast</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#getDebugUnregister--" title="class or interface in android.content">getDebugUnregister</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#getResultCode--" title="class or interface in android.content">getResultCode</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#getResultData--" title="class or interface in android.content">getResultData</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#getResultExtras-boolean-" title="class or interface in android.content">getResultExtras</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#goAsync--" title="class or interface in android.content">goAsync</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#isInitialStickyBroadcast--" title="class or interface in android.content">isInitialStickyBroadcast</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#isOrderedBroadcast--" title="class or interface in android.content">isOrderedBroadcast</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#peekService-android.content.Context-android.content.Intent-" title="class or interface in android.content">peekService</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#setDebugUnregister-boolean-" title="class or interface in android.content">setDebugUnregister</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#setOrderedHint-boolean-" title="class or interface in android.content">setOrderedHint</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#setResult-int-java.lang.String-android.os.Bundle-" title="class or interface in android.content">setResult</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#setResultCode-int-" title="class or interface in android.content">setResultCode</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#setResultData-java.lang.String-" title="class or interface in android.content">setResultData</a>, <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#setResultExtras-android.os.Bundle-" title="class or interface in android.content">setResultExtras</a></code></li>
+<h3>Methods inherited from class&nbsp;android.content.BroadcastReceiver</h3>
+<code>abortBroadcast, clearAbortBroadcast, getAbortBroadcast, getDebugUnregister, getResultCode, getResultData, getResultExtras, goAsync, isInitialStickyBroadcast, isOrderedBroadcast, peekService, setDebugUnregister, setOrderedHint, setResult, setResultCode, setResultData, setResultExtras</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -235,12 +235,12 @@ extends <a href="https://developer.android.com/reference/android/content/Broadca
 <ul class="blockListLast">
 <li class="blockList">
 <h4>onReceive</h4>
-<pre><a href="https://developer.android.com/reference/android/support.annotation.CallSuper.html?is-external=true" title="class or interface in android">@CallSuper</a>
-public&nbsp;void&nbsp;onReceive(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
-                                 <a href="https://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;intent)</pre>
+<pre>@CallSuper
+public&nbsp;void&nbsp;onReceive(android.content.Context&nbsp;context,
+                                 android.content.Intent&nbsp;intent)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#onReceive-android.content.Context-android.content.Intent-" title="class or interface in android.content">onReceive</a></code>&nbsp;in class&nbsp;<code><a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a></code></dd>
+<dd><code>onReceive</code>&nbsp;in class&nbsp;<code>android.content.BroadcastReceiver</code></dd>
 </dl>
 </li>
 </ul>
@@ -313,6 +313,5 @@ public&nbsp;void&nbsp;onReceive(<a href="https://developer.android.com/reference
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

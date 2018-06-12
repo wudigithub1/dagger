@@ -92,9 +92,9 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
+<pre>@Documented
+ @Target(value=METHOD)
+ @Retention(value=RUNTIME)
 public @interface <span class="memberNameLabel">Provides</span></pre>
 <div class="block">Annotates methods of a <a href="../dagger/Module.html" title="annotation in dagger">module</a> to create a provider method binding. The
  method's return type is bound to its returned value. The <a href="../dagger/Component.html" title="annotation in dagger">component</a>
@@ -103,7 +103,7 @@ public @interface <span class="memberNameLabel">Provides</span></pre>
  <h3>Nullability</h3>
 
  <p>Dagger forbids injecting <code>null</code> by default. Component implemenations that invoke
- <code>@Provides</code> methods that return <code>null</code> will throw a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang"><code>NullPointerException</code></a>
+ <code>@Provides</code> methods that return <code>null</code> will throw a <code>NullPointerException</code>
  immediately thereafter. <code>@Provides</code> methods may opt into allowing <code>null</code> by
  annotating the method with any <code>@Nullable</code> annotation like
  <code>javax.annotation.Nullable</code> or <code>android.support.annotation.Nullable</code>.
@@ -177,6 +177,5 @@ public @interface <span class="memberNameLabel">Provides</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

@@ -92,9 +92,9 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#TYPE" title="class or interface in java.lang.annotation">TYPE</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
+<pre>@Retention(value=RUNTIME)
+ @Target(value=TYPE)
+ @Documented
 public @interface <span class="memberNameLabel">ProductionSubcomponent</span></pre>
 <div class="block">A subcomponent that inherits the bindings from a parent <a href="../../dagger/Component.html" title="annotation in dagger"><code>Component</code></a>, <a href="../../dagger/Subcomponent.html" title="annotation in dagger"><code>Subcomponent</code></a>,
  <a href="../../dagger/producers/ProductionComponent.html" title="annotation in dagger.producers"><code>ProductionComponent</code></a>, or <a href="../../dagger/producers/ProductionSubcomponent.html" title="annotation in dagger.producers"><code>ProductionSubcomponent</code></a>. The details of how to associate a
@@ -126,7 +126,7 @@ public @interface <span class="memberNameLabel">ProductionSubcomponent</span></p
 <th class="colLast" scope="col">Optional Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/producers/ProductionSubcomponent.html#modules--">modules</a></span></code>
 <div class="block">A list of classes annotated with <a href="../../dagger/Module.html" title="annotation in dagger"><code>Module</code></a> or <a href="../../dagger/producers/ProducerModule.html" title="annotation in dagger.producers"><code>ProducerModule</code></a> whose bindings are
  used to generate the subcomponent implementation.</div>
@@ -153,7 +153,7 @@ public @interface <span class="memberNameLabel">ProductionSubcomponent</span></p
 <ul class="blockListLast">
 <li class="blockList">
 <h4>modules</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]&nbsp;modules</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;[]&nbsp;modules</pre>
 <div class="block">A list of classes annotated with <a href="../../dagger/Module.html" title="annotation in dagger"><code>Module</code></a> or <a href="../../dagger/producers/ProducerModule.html" title="annotation in dagger.producers"><code>ProducerModule</code></a> whose bindings are
  used to generate the subcomponent implementation.  Note that through the use of
  <a href="../../dagger/Module.html#includes--"><code>Module.includes()</code></a> or <a href="../../dagger/producers/ProducerModule.html#includes--"><code>ProducerModule.includes()</code></a> the full set of modules used to
@@ -231,6 +231,5 @@ public @interface <span class="memberNameLabel">ProductionSubcomponent</span></p
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

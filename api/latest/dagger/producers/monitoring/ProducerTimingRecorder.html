@@ -96,7 +96,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
 <li>dagger.producers.monitoring.ProducerTimingRecorder</li>
@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public abstract class <span class="typeNameLabel">ProducerTimingRecorder</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends java.lang.Object</pre>
 <div class="block">A hook for recording the timing of the execution of individual
  <a href="../../../dagger/producers/Produces.html" title="annotation in dagger.producers">producer methods</a>. See <a href="../../../dagger/producers/monitoring/ProductionComponentTimingRecorder.html" title="interface in dagger.producers.monitoring"><code>ProductionComponentTimingRecorder</code></a> for how to
  install these monitors.
@@ -119,7 +119,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
  <p>All timings are measured at nanosecond precision, but not necessarily nanosecond resolution.
  That is, timings will be reported in nanoseconds, but the timing source will not necessarily
- update at nanosecond resolution. For example, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html?is-external=true#nanoTime--" title="class or interface in java.lang"><code>System.nanoTime()</code></a> would satisfy these
+ update at nanosecond resolution. For example, <code>System.nanoTime()</code> would satisfy these
  constraints.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -168,7 +168,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/producers/monitoring/ProducerTimingRecorder.html#recordFailure-java.lang.Throwable-long-">recordFailure</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;exception,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/producers/monitoring/ProducerTimingRecorder.html#recordFailure-java.lang.Throwable-long-">recordFailure</a></span>(java.lang.Throwable&nbsp;exception,
              long&nbsp;latencyNanos)</code>
 <div class="block">Reports that the producer's future has failed with the given statistics.</div>
 </td>
@@ -182,7 +182,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/producers/monitoring/ProducerTimingRecorder.html#recordSkip-java.lang.Throwable-">recordSkip</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;exception)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/producers/monitoring/ProducerTimingRecorder.html#recordSkip-java.lang.Throwable-">recordSkip</a></span>(java.lang.Throwable&nbsp;exception)</code>
 <div class="block">Reports that the producer was skipped because one of its inputs failed.</div>
 </td>
 </tr>
@@ -197,8 +197,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -275,7 +275,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>recordFailure</h4>
-<pre>public&nbsp;void&nbsp;recordFailure(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;exception,
+<pre>public&nbsp;void&nbsp;recordFailure(java.lang.Throwable&nbsp;exception,
                           long&nbsp;latencyNanos)</pre>
 <div class="block">Reports that the producer's future has failed with the given statistics.</div>
 <dl>
@@ -292,7 +292,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>recordSkip</h4>
-<pre>public&nbsp;void&nbsp;recordSkip(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;exception)</pre>
+<pre>public&nbsp;void&nbsp;recordSkip(java.lang.Throwable&nbsp;exception)</pre>
 <div class="block">Reports that the producer was skipped because one of its inputs failed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -380,6 +380,5 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

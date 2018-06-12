@@ -92,8 +92,8 @@
 <li class="blockList">
 <hr>
 <br>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#TYPE" title="class or interface in java.lang.annotation">TYPE</a>)
+<pre>@Documented
+ @Target(value=TYPE)
 public @interface <span class="memberNameLabel">GrpcService</span></pre>
 <div class="block">Annotates a class that implements a gRPC service.
 
@@ -109,9 +109,9 @@ public @interface <span class="memberNameLabel">GrpcService</span></pre>
  <ol>
  <li>Create a <a href="../../../dagger/Subcomponent.html" title="annotation in dagger">subcomponent</a> that implements <code>FooComponent</code>
      and installs <code>FooGrpcServiceModule</code>.
- <li>Install <a href="../../../dagger/grpc/server/NettyServerModule.html" title="class in dagger.grpc.server"><code>NettyServerModule</code></a> or another <a href="../../../dagger/grpc/server/ServerModule.html" title="class in dagger.grpc.server"><code>ServerModule</code></a> subclass and <code>FooGrpcProxyModule</code> into your <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Singleton.html?is-external=true" title="class or interface in javax.inject"><code>@Singleton</code></a> <a href="../../../dagger/Component.html" title="annotation in dagger">component</a>.
- <li>Bind an implementation of <code>FooComponent.Factory</code> in your <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Singleton.html?is-external=true" title="class or interface in javax.inject"><code>@Singleton</code></a> <a href="../../../dagger/Component.html" title="annotation in dagger">component</a>. The
-     implementation will typically inject the <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Singleton.html?is-external=true" title="class or interface in javax.inject"><code>@Singleton</code></a>
+ <li>Install <a href="../../../dagger/grpc/server/NettyServerModule.html" title="class in dagger.grpc.server"><code>NettyServerModule</code></a> or another <a href="../../../dagger/grpc/server/ServerModule.html" title="class in dagger.grpc.server"><code>ServerModule</code></a> subclass and <code>FooGrpcProxyModule</code> into your <code>@Singleton</code> <a href="../../../dagger/Component.html" title="annotation in dagger">component</a>.
+ <li>Bind an implementation of <code>FooComponent.Factory</code> in your <code>@Singleton</code> <a href="../../../dagger/Component.html" title="annotation in dagger">component</a>. The
+     implementation will typically inject the <code>@Singleton</code>
      <a href="../../../dagger/Component.html" title="annotation in dagger">component</a> and call subcomponent factory methods to instantiate
      the correct subcomponent.
  </ol></div>
@@ -134,7 +134,7 @@ public @interface <span class="memberNameLabel">GrpcService</span></pre>
 <th class="colLast" scope="col">Required Element and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
+<td class="colFirst"><code>java.lang.Class&lt;?&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/grpc/server/GrpcService.html#grpcClass--">grpcClass</a></span></code>
 <div class="block">The class that gRPC generates from the proto service definition.</div>
 </td>
@@ -160,7 +160,7 @@ public @interface <span class="memberNameLabel">GrpcService</span></pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>grpcClass</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;grpcClass</pre>
+<pre>public abstract&nbsp;java.lang.Class&lt;?&gt;&nbsp;grpcClass</pre>
 <div class="block">The class that gRPC generates from the proto service definition.</div>
 </li>
 </ul>
@@ -231,6 +231,5 @@ public @interface <span class="memberNameLabel">GrpcService</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

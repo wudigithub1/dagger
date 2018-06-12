@@ -98,11 +98,11 @@
 </div>
 <br>
 <pre>@Beta
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#ANNOTATION_TYPE" title="class or interface in java.lang.annotation">ANNOTATION_TYPE</a>)
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+ @Documented
+ @Target(value=ANNOTATION_TYPE)
+ @Deprecated
 public @interface <span class="memberNameLabel">CanReleaseReferences</span></pre>
-<div class="block">Annotates <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Scope.html?is-external=true" title="class or interface in javax.inject">scope annotations</a> to indicate that references to
+<div class="block">Annotates scope annotations to indicate that references to
  objects stored within that scope can be <a
  href="https://google.github.io/dagger/users-guide.html#releasable-references">released</a> during the lifetime
  of the scope.
@@ -131,7 +131,7 @@ public @interface <span class="memberNameLabel">CanReleaseReferences</span></pre
     @Scope
    public  @interface MyScope {}</pre>
 
- <p><b>Note:</b>Releasable references uses Java's <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a>, and so is
+ <p><b>Note:</b>Releasable references uses Java's <code>WeakReference</code>, and so is
  not compatible with <a href="http://www.gwtproject.org/">GWT</a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -202,6 +202,5 @@ public @interface <span class="memberNameLabel">CanReleaseReferences</span></pre
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>
