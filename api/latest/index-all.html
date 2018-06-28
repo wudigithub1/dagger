@@ -178,7 +178,7 @@
 <div class="block">An edge that represents a subcomponent factory method linking a parent component to a child
  subcomponent.</div>
 </dd>
-<dt><a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph.ComponentNode</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dt><a href="dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model"><span class="typeNameLink">BindingGraph.ComponentNode</span></a> - Interface in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
 <div class="block">A <b>component node</b> in the graph.</div>
 </dd>
@@ -313,8 +313,6 @@
 <dd>
 <div class="block">Returns the component node for a component.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#ComponentNode--">ComponentNode()</a></span> - Constructor for class dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#componentNodes--">componentNodes()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
 <dd>
 <div class="block">Returns the component nodes.</div>
@@ -327,7 +325,7 @@
 <dd>
 <div class="block">The component that owns the <a href="dagger/model/BindingGraph.BindingNode.html#binding--"><code>BindingGraph.BindingNode.binding()</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#componentPath--">componentPath()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></dt>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#componentPath--">componentPath()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a></dt>
 <dd>
 <div class="block">The component represented by this node.</div>
 </dd>
@@ -631,7 +629,7 @@
 <dd>
 <div class="block">Returns the edges for entry points that transitively depend on a binding.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#entryPoints--">entryPoints()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></dt>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#entryPoints--">entryPoints()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a></dt>
 <dd>
 <div class="block">The entry points on this component.</div>
 </dd>
@@ -1146,6 +1144,10 @@
 </a>
 <h2 class="title">P</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#parent--">parent()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
+<dd>
+<div class="block">Returns this path's parent path.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/ComponentPath.html#parentComponent--">parentComponent()</a></span> - Method in class dagger.model.<a href="dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></dt>
 <dd>
 <div class="block">Returns the parent of the <a href="dagger/model/ComponentPath.html#currentComponent--">ComponentPath.currentComponent()</a> current component}.</div>
@@ -1358,6 +1360,14 @@
 <dd>
 <div class="block">Reports a diagnostic for a dependency.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/DiagnosticReporter.html#reportSubcomponentFactoryMethod-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.ChildFactoryMethodEdge-java.lang.String-">reportSubcomponentFactoryMethod(Diagnostic.Kind, BindingGraph.ChildFactoryMethodEdge, String)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a></dt>
+<dd>
+<div class="block">Reports a diagnostic for a subcomponent factory method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/spi/DiagnosticReporter.html#reportSubcomponentFactoryMethod-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.ChildFactoryMethodEdge-java.lang.String-java.lang.Object-java.lang.Object...-">reportSubcomponentFactoryMethod(Diagnostic.Kind, BindingGraph.ChildFactoryMethodEdge, String, Object, Object...)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a></dt>
+<dd>
+<div class="block">Reports a diagnostic for a subcomponent factory method.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/producers/monitoring/ProducerMonitor.html#requested--">requested()</a></span> - Method in class dagger.producers.monitoring.<a href="dagger/producers/monitoring/ProducerMonitor.html" title="class in dagger.producers.monitoring">ProducerMonitor</a></dt>
 <dd>
 <div class="block">Called when the producer's output is requested; that is, when the first method is called that
@@ -1426,7 +1436,7 @@
 <dd>
 <div class="block">The scope annotation element.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#scopes--">scopes()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></dt>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#scopes--">scopes()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a></dt>
 <dd>
 <div class="block">The scopes declared on this component.</div>
 </dd>
@@ -1517,8 +1527,6 @@
 <div class="block">Returns a <a href="dagger/model/Key.Builder.html" title="class in dagger.model"><code>Key.Builder</code></a> that inherits the properties of this key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ChildFactoryMethodEdge.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ChildFactoryMethodEdge.html" title="class in dagger.model">BindingGraph.ChildFactoryMethodEdge</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.DependencyEdge.html#toString--">toString()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a></dt>
 <dd>&nbsp;</dd>

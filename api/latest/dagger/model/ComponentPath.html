@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":6,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":6,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -173,18 +173,24 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/ComponentPath.html#parent--">parent</a></span>()</code>
+<div class="block">Returns this path's parent path.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>javax.lang.model.element.TypeElement</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/ComponentPath.html#parentComponent--">parentComponent</a></span>()</code>
 <div class="block">Returns the parent of the <a href="../../dagger/model/ComponentPath.html#currentComponent--">currentComponent()</a> current component}.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>javax.lang.model.element.TypeElement</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/ComponentPath.html#rootComponent--">rootComponent</a></span>()</code>
 <div class="block">Returns the root <a href="../../dagger/Component.html" title="annotation in dagger"><code>Component</code></a>- or <a href="../../dagger/producers/ProductionComponent.html" title="annotation in dagger.producers"><code>ProductionComponent</code></a>-annotated type</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/ComponentPath.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -276,6 +282,20 @@ extends java.lang.Object</pre>
 <h4>parentComponent</h4>
 <pre>public final&nbsp;javax.lang.model.element.TypeElement&nbsp;parentComponent()</pre>
 <div class="block">Returns the parent of the <a href="../../dagger/model/ComponentPath.html#currentComponent--">currentComponent()</a> current component}.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.IllegalStateException</code> - if the current graph is the <a href="../../dagger/model/ComponentPath.html#atRoot--">root component</a></dd>
+</dl>
+</li>
+</ul>
+<a name="parent--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parent</h4>
+<pre>public final&nbsp;<a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a>&nbsp;parent()</pre>
+<div class="block">Returns this path's parent path.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.IllegalStateException</code> - if the current graph is the <a href="../../dagger/model/ComponentPath.html#atRoot--">root component</a></dd>

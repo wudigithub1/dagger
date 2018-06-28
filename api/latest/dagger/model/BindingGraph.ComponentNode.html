@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -75,13 +75,13 @@ var activeTableTab = "activeTableTab";
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -92,22 +92,14 @@ var activeTableTab = "activeTableTab";
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">dagger.model</div>
-<h2 title="Class BindingGraph.ComponentNode" class="title">Class BindingGraph.ComponentNode</h2>
+<h2 title="Interface BindingGraph.ComponentNode" class="title">Interface BindingGraph.ComponentNode</h2>
 </div>
 <div class="contentContainer">
-<ul class="inheritance">
-<li>java.lang.Object</li>
-<li>
-<ul class="inheritance">
-<li>dagger.model.BindingGraph.ComponentNode</li>
-</ul>
-</li>
-</ul>
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
 <dl>
-<dt>All Implemented Interfaces:</dt>
+<dt>All Superinterfaces:</dt>
 <dd><a href="../../dagger/model/BindingGraph.Node.html" title="interface in dagger.model">BindingGraph.Node</a></dd>
 </dl>
 <dl>
@@ -116,9 +108,8 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public abstract static class <span class="typeNameLabel">BindingGraph.ComponentNode</span>
-extends java.lang.Object
-implements <a href="../../dagger/model/BindingGraph.Node.html" title="interface in dagger.model">BindingGraph.Node</a></pre>
+<pre>public static interface <span class="typeNameLabel">BindingGraph.ComponentNode</span>
+extends <a href="../../dagger/model/BindingGraph.Node.html" title="interface in dagger.model">BindingGraph.Node</a></pre>
 <div class="block">A <b>component node</b> in the graph. Every entry point <a href="../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">dependency
  edge</a>'s source node is a component node for the component containing the entry point.</div>
 </li>
@@ -127,23 +118,6 @@ implements <a href="../../dagger/model/BindingGraph.Node.html" title="interface 
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="constructor.summary">
-<!--   -->
-</a>
-<h3>Constructor Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
-<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colOne" scope="col">Constructor and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.ComponentNode.html#ComponentNode--">ComponentNode</a></span>()</code>&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -151,41 +125,30 @@ implements <a href="../../dagger/model/BindingGraph.Node.html" title="interface 
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>abstract <a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></code></td>
+<td class="colFirst"><code><a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.ComponentNode.html#componentPath--">componentPath</a></span>()</code>
 <div class="block">The component represented by this node.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>abstract com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.ComponentNode.html#entryPoints--">entryPoints</a></span>()</code>
 <div class="block">The entry points on this component.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>abstract com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.ComponentNode.html#scopes--">scopes</a></span>()</code>
 <div class="block">The scopes declared on this component.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.ComponentNode.html#toString--">toString</a></span>()</code>&nbsp;</td>
-</tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
-</ul>
 </li>
 </ul>
 </li>
@@ -194,23 +157,6 @@ implements <a href="../../dagger/model/BindingGraph.Node.html" title="interface 
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="constructor.detail">
-<!--   -->
-</a>
-<h3>Constructor Detail</h3>
-<a name="ComponentNode--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>ComponentNode</h4>
-<pre>public&nbsp;ComponentNode()</pre>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -223,7 +169,7 @@ implements <a href="../../dagger/model/BindingGraph.Node.html" title="interface 
 <ul class="blockList">
 <li class="blockList">
 <h4>componentPath</h4>
-<pre>public abstract&nbsp;<a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a>&nbsp;componentPath()</pre>
+<pre><a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a>&nbsp;componentPath()</pre>
 <div class="block">The component represented by this node.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -237,31 +183,18 @@ implements <a href="../../dagger/model/BindingGraph.Node.html" title="interface 
 <ul class="blockList">
 <li class="blockList">
 <h4>entryPoints</h4>
-<pre>public abstract&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;&nbsp;entryPoints()</pre>
+<pre>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>&gt;&nbsp;entryPoints()</pre>
 <div class="block">The entry points on this component.</div>
 </li>
 </ul>
 <a name="scopes--">
 <!--   -->
 </a>
-<ul class="blockList">
-<li class="blockList">
-<h4>scopes</h4>
-<pre>public abstract&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;&nbsp;scopes()</pre>
-<div class="block">The scopes declared on this component.</div>
-</li>
-</ul>
-<a name="toString--">
-<!--   -->
-</a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>toString</h4>
-<pre>public final&nbsp;java.lang.String&nbsp;toString()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
-</dl>
+<h4>scopes</h4>
+<pre>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/Scope.html" title="class in dagger.model">Scope</a>&gt;&nbsp;scopes()</pre>
+<div class="block">The scopes declared on this component.</div>
 </li>
 </ul>
 </li>
@@ -319,13 +252,13 @@ implements <a href="../../dagger/model/BindingGraph.Node.html" title="interface 
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

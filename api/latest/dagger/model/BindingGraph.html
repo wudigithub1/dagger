@@ -132,7 +132,7 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
  If a binding is owned by more than one component, there is one binding node for that binding for
  every owning component.
 
- <p>There is a <b><a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">component node</a></b> (without a binding) for each
+ <p>There is a <b><a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">component node</a></b> (without a binding) for each
  component in the graph.
 
  <h3>Edges</h3>
@@ -183,8 +183,8 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></span></code>
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a></span></code>
 <div class="block">A <b>component node</b> in the graph.</div>
 </td>
 </tr>
@@ -247,19 +247,19 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.html#componentNode-dagger.model.ComponentPath-">componentNode</a></span>(<a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a>&nbsp;component)</code>
 <div class="block">Returns the component node for a component.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.html#componentNodes--">componentNodes</a></span>()</code>
 <div class="block">Returns the component nodes.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.html#componentNodes-javax.lang.model.element.TypeElement-">componentNodes</a></span>(javax.lang.model.element.TypeElement&nbsp;component)</code>
 <div class="block">Returns the component nodes for a component.</div>
 </td>
@@ -313,7 +313,7 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 </td>
 </tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code><a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a></code></td>
+<td class="colFirst"><code><a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.html#rootComponentNode--">rootComponentNode</a></span>()</code>
 <div class="block">Returns the component node for the root component.</div>
 </td>
@@ -383,7 +383,7 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 <ul class="blockList">
 <li class="blockList">
 <h4>componentNodes</h4>
-<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a>&gt;&nbsp;componentNodes()</pre>
+<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a>&gt;&nbsp;componentNodes()</pre>
 <div class="block">Returns the component nodes.</div>
 </li>
 </ul>
@@ -393,7 +393,7 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 <ul class="blockList">
 <li class="blockList">
 <h4>componentNode</h4>
-<pre>public&nbsp;java.util.Optional&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a>&gt;&nbsp;componentNode(<a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a>&nbsp;component)</pre>
+<pre>public&nbsp;java.util.Optional&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a>&gt;&nbsp;componentNode(<a href="../../dagger/model/ComponentPath.html" title="class in dagger.model">ComponentPath</a>&nbsp;component)</pre>
 <div class="block">Returns the component node for a component.</div>
 </li>
 </ul>
@@ -403,7 +403,7 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 <ul class="blockList">
 <li class="blockList">
 <h4>componentNodes</h4>
-<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a>&gt;&nbsp;componentNodes(javax.lang.model.element.TypeElement&nbsp;component)</pre>
+<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a>&gt;&nbsp;componentNodes(javax.lang.model.element.TypeElement&nbsp;component)</pre>
 <div class="block">Returns the component nodes for a component.</div>
 </li>
 </ul>
@@ -413,7 +413,7 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 <ul class="blockList">
 <li class="blockList">
 <h4>rootComponentNode</h4>
-<pre>public&nbsp;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="class in dagger.model">BindingGraph.ComponentNode</a>&nbsp;rootComponentNode()</pre>
+<pre>public&nbsp;<a href="../../dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a>&nbsp;rootComponentNode()</pre>
 <div class="block">Returns the component node for the root component.</div>
 </li>
 </ul>
