@@ -1,5 +1,6 @@
 dagger
 dagger.android
+dagger.android.internal
 dagger.android.support
 dagger.grpc.server
 dagger.grpc.server.processor
