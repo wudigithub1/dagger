@@ -201,18 +201,24 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a></span></code>
+<div class="block">A node in the binding graph that is either a <a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model"><code>BindingGraph.BindingNode</code></a> or a <a href="../../dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model"><code>BindingGraph.MissingBindingNode</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model">BindingGraph.MissingBindingNode</a></span></code>
 <div class="block">A node in the binding graph that represents a missing binding for a key in a component.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.Node.html" title="interface in dagger.model">BindingGraph.Node</a></span></code>
 <div class="block">A node in the binding graph.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.SubcomponentBuilderBindingEdge.html" title="class in dagger.model">BindingGraph.SubcomponentBuilderBindingEdge</a></span></code>
 <div class="block">An edge that represents the link between a parent component and a child subcomponent implied by
@@ -283,9 +289,9 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&gt;</code></td>
+<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.html#entryPointBindingNodes--">entryPointBindingNodes</a></span>()</code>
-<div class="block">Returns the binding nodes for bindings that directly satisfy entry points.</div>
+<div class="block">Returns the binding nodes or missing binding nodes that directly satisfy entry points.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -302,8 +308,9 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.html#entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.BindingNode-">entryPointEdgesDependingOnBindingNode</a></span>(<a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode)</code>
-<div class="block">Returns the edges for entry points that transitively depend on a binding.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/model/BindingGraph.html#entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.MaybeBindingNode-">entryPointEdgesDependingOnBindingNode</a></span>(<a href="../../dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a>&nbsp;bindingNode)</code>
+<div class="block">Returns the edges for entry points that transitively depend on a binding or missing binding for
+ a key.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -478,19 +485,19 @@ extends <a href="../../dagger/model/ForwardingNetwork.html" title="class in dagg
 <ul class="blockList">
 <li class="blockList">
 <h4>entryPointBindingNodes</h4>
-<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&gt;&nbsp;entryPointBindingNodes()</pre>
-<div class="block">Returns the binding nodes for bindings that directly satisfy entry points.</div>
+<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a>&gt;&nbsp;entryPointBindingNodes()</pre>
+<div class="block">Returns the binding nodes or missing binding nodes that directly satisfy entry points.</div>
 </li>
 </ul>
-<a name="entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.BindingNode-">
+<a name="entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.MaybeBindingNode-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>entryPointEdgesDependingOnBindingNode</h4>
-<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a>&gt;&nbsp;entryPointEdgesDependingOnBindingNode(<a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode)</pre>
-<div class="block">Returns the edges for entry points that transitively depend on a binding. Never returns an
- empty set.</div>
+<pre>public&nbsp;com.google.common.collect.ImmutableSet&lt;<a href="../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a>&gt;&nbsp;entryPointEdgesDependingOnBindingNode(<a href="../../dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a>&nbsp;bindingNode)</pre>
+<div class="block">Returns the edges for entry points that transitively depend on a binding or missing binding for
+ a key. Never returns an empty set.</div>
 </li>
 </ul>
 </li>

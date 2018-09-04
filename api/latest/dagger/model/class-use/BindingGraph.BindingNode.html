@@ -88,13 +88,6 @@
  binding graph.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="#dagger.spi">dagger.spi</a></td>
-<td class="colLast">
-<div class="block">This package contains the Service Provider interface (SPI) to the <a href="../../../dagger/model/package-summary.html"><code>dagger.model</code></a> APIs at
- annotation-processing-time.</div>
-</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -123,12 +116,6 @@
 <div class="block">Returns the binding nodes for a key.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BindingGraph.</span><code><span class="memberNameLink"><a href="../../../dagger/model/BindingGraph.html#entryPointBindingNodes--">entryPointBindingNodes</a></span>()</code>
-<div class="block">Returns the binding nodes for bindings that directly satisfy entry points.</div>
-</td>
-</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -142,44 +129,6 @@
 <td class="colFirst"><code>com.google.common.collect.ImmutableSetMultimap&lt;<a href="../../../dagger/model/DependencyRequest.html" title="class in dagger.model">DependencyRequest</a>,<a href="../../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BindingGraph.</span><code><span class="memberNameLink"><a href="../../../dagger/model/BindingGraph.html#dependencyEdges-dagger.model.BindingGraph.BindingNode-">dependencyEdges</a></span>(<a href="../../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode)</code>
 <div class="block">Returns the dependency edges for the dependencies of a binding.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>com.google.common.collect.ImmutableSet&lt;<a href="../../../dagger/model/BindingGraph.DependencyEdge.html" title="class in dagger.model">BindingGraph.DependencyEdge</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">BindingGraph.</span><code><span class="memberNameLink"><a href="../../../dagger/model/BindingGraph.html#entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.BindingNode-">entryPointEdgesDependingOnBindingNode</a></span>(<a href="../../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode)</code>
-<div class="block">Returns the edges for entry points that transitively depend on a binding.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList"><a name="dagger.spi">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a> in <a href="../../../dagger/spi/package-summary.html">dagger.spi</a></h3>
-<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../dagger/spi/package-summary.html">dagger.spi</a> with parameters of type <a href="../../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">DiagnosticReporter.</span><code><span class="memberNameLink"><a href="../../../dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.BindingNode-java.lang.String-">reportBinding</a></span>(javax.tools.Diagnostic.Kind&nbsp;diagnosticKind,
-             <a href="../../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
-             java.lang.String&nbsp;message)</code>
-<div class="block">Reports a diagnostic for a binding.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">DiagnosticReporter.</span><code><span class="memberNameLink"><a href="../../../dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.BindingNode-java.lang.String-java.lang.Object-java.lang.Object...-">reportBinding</a></span>(javax.tools.Diagnostic.Kind&nbsp;diagnosticKind,
-             <a href="../../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a>&nbsp;bindingNode,
-             java.lang.String&nbsp;messageFormat,
-             java.lang.Object&nbsp;firstArg,
-             java.lang.Object...&nbsp;moreArgs)</code>
-<div class="block">Reports a diagnostic for a binding.</div>
 </td>
 </tr>
 </tbody>

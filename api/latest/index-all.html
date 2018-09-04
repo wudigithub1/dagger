@@ -198,6 +198,10 @@
 <dd>
 <div class="block">An edge in the binding graph.</div>
 </dd>
+<dt><a href="dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model"><span class="typeNameLink">BindingGraph.MaybeBindingNode</span></a> - Interface in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
+<dd>
+<div class="block">A node in the binding graph that is either a <a href="dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model"><code>BindingGraph.BindingNode</code></a> or a <a href="dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model"><code>BindingGraph.MissingBindingNode</code></a>.</div>
+</dd>
 <dt><a href="dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model"><span class="typeNameLink">BindingGraph.MissingBindingNode</span></a> - Class in <a href="dagger/model/package-summary.html">dagger.model</a></dt>
 <dd>
 <div class="block">A node in the binding graph that represents a missing binding for a key in a component.</div>
@@ -336,6 +340,10 @@
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#componentPath--">componentPath()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a></dt>
 <dd>
 <div class="block">The component represented by this node.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.MaybeBindingNode.html#componentPath--">componentPath()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a></dt>
+<dd>
+<div class="block">The component that owns the binding, or in which the binding is missing.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.MissingBindingNode.html#componentPath--">componentPath()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model">BindingGraph.MissingBindingNode</a></dt>
 <dd>
@@ -625,7 +633,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointBindingNodes--">entryPointBindingNodes()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
 <dd>
-<div class="block">Returns the binding nodes for bindings that directly satisfy entry points.</div>
+<div class="block">Returns the binding nodes or missing binding nodes that directly satisfy entry points.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointEdges-dagger.model.ComponentPath-">entryPointEdges(ComponentPath)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
 <dd>
@@ -635,9 +643,10 @@
 <dd>
 <div class="block">Returns the dependency edges for all entry points for all components and subcomponents.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.BindingNode-">entryPointEdgesDependingOnBindingNode(BindingGraph.BindingNode)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.html#entryPointEdgesDependingOnBindingNode-dagger.model.BindingGraph.MaybeBindingNode-">entryPointEdgesDependingOnBindingNode(BindingGraph.MaybeBindingNode)</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.html" title="class in dagger.model">BindingGraph</a></dt>
 <dd>
-<div class="block">Returns the edges for entry points that transitively depend on a binding.</div>
+<div class="block">Returns the edges for entry points that transitively depend on a binding or missing binding for
+ a key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.ComponentNode.html#entryPoints--">entryPoints()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.ComponentNode.html" title="interface in dagger.model">BindingGraph.ComponentNode</a></dt>
 <dd>
@@ -961,6 +970,12 @@
 <dd>
 <div class="block">The binding's key.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.BindingNode.html#key--">key()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.MaybeBindingNode.html#key--">key()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a></dt>
+<dd>
+<div class="block">The key of the binding, or for which there is no binding.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.MissingBindingNode.html#key--">key()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model">BindingGraph.MissingBindingNode</a></dt>
 <dd>
 <div class="block">The key for which there is no binding.</div>
@@ -1021,6 +1036,14 @@
 <dd>
 <div class="block">Identifies annotation types that are used to associate keys with values returned by <a href="dagger/Provides.html" title="annotation in dagger">provider methods</a> in order to compose a <a href="dagger/multibindings/IntoMap.html" title="annotation in dagger.multibindings">map</a>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.BindingNode.html#maybeBinding--">maybeBinding()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model">BindingGraph.BindingNode</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.MaybeBindingNode.html#maybeBinding--">maybeBinding()</a></span> - Method in interface dagger.model.<a href="dagger/model/BindingGraph.MaybeBindingNode.html" title="interface in dagger.model">BindingGraph.MaybeBindingNode</a></dt>
+<dd>
+<div class="block">The binding, or empty if missing.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="dagger/model/BindingGraph.MissingBindingNode.html#maybeBinding--">maybeBinding()</a></span> - Method in class dagger.model.<a href="dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model">BindingGraph.MissingBindingNode</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="dagger/android/DispatchingAndroidInjector.html#maybeInject-T-">maybeInject(T)</a></span> - Method in class dagger.android.<a href="dagger/android/DispatchingAndroidInjector.html" title="class in dagger.android">DispatchingAndroidInjector</a></dt>
 <dd>
 <div class="block">Attempts to perform members-injection on <code>instance</code>, returning <code>true</code> if
@@ -1352,13 +1375,13 @@
 <div class="block">Releases the strong references held by all providers in this <a href="dagger/releasablereferences/ReleasableReferenceManager.html#scope--">scope</a> to the
  objects previously returned by <code>Provider.get()</code>, leaving only <code>WeakReference</code>s.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.BindingNode-java.lang.String-">reportBinding(Diagnostic.Kind, BindingGraph.BindingNode, String)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a></dt>
+<dt><span class="memberNameLink"><a href="dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.MaybeBindingNode-java.lang.String-">reportBinding(Diagnostic.Kind, BindingGraph.MaybeBindingNode, String)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a></dt>
 <dd>
-<div class="block">Reports a diagnostic for a binding.</div>
+<div class="block">Reports a diagnostic for a binding or missing binding.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.BindingNode-java.lang.String-java.lang.Object-java.lang.Object...-">reportBinding(Diagnostic.Kind, BindingGraph.BindingNode, String, Object, Object...)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a></dt>
+<dt><span class="memberNameLink"><a href="dagger/spi/DiagnosticReporter.html#reportBinding-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.MaybeBindingNode-java.lang.String-java.lang.Object-java.lang.Object...-">reportBinding(Diagnostic.Kind, BindingGraph.MaybeBindingNode, String, Object, Object...)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a></dt>
 <dd>
-<div class="block">Reports a diagnostic for a binding.</div>
+<div class="block">Reports a diagnostic for a binding or missing binding.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="dagger/spi/DiagnosticReporter.html#reportComponent-javax.tools.Diagnostic.Kind-dagger.model.BindingGraph.ComponentNode-java.lang.String-">reportComponent(Diagnostic.Kind, BindingGraph.ComponentNode, String)</a></span> - Method in interface dagger.spi.<a href="dagger/spi/DiagnosticReporter.html" title="interface in dagger.spi">DiagnosticReporter</a></dt>
 <dd>

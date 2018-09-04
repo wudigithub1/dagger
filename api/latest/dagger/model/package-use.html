@@ -133,64 +133,69 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.MaybeBindingNode.html#dagger.model">BindingGraph.MaybeBindingNode</a>
+<div class="block">A node in the binding graph that is either a <a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model"><code>BindingGraph.BindingNode</code></a> or a <a href="../../dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model"><code>BindingGraph.MissingBindingNode</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.MissingBindingNode.html#dagger.model">BindingGraph.MissingBindingNode</a>
 <div class="block">A node in the binding graph that represents a missing binding for a key in a component.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.Node.html#dagger.model">BindingGraph.Node</a>
 <div class="block">A node in the binding graph.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/BindingKind.html#dagger.model">BindingKind</a>
 <div class="block">Represents the different kinds of <a href="../../dagger/model/Binding.html" title="interface in dagger.model"><code>Binding</code></a>s that can exist in a binding graph.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../dagger/model/class-use/ComponentPath.html#dagger.model">ComponentPath</a>
 <div class="block">A path containing a component and all of its ancestor components.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/DependencyRequest.html#dagger.model">DependencyRequest</a>
 <div class="block">Represents a request for a <a href="../../dagger/model/Key.html" title="class in dagger.model"><code>Key</code></a> at an injection point.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../dagger/model/class-use/DependencyRequest.Builder.html#dagger.model">DependencyRequest.Builder</a>
 <div class="block">A builder of <a href="../../dagger/model/DependencyRequest.html" title="class in dagger.model"><code>DependencyRequest</code></a>s.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/ForwardingNetwork.html#dagger.model">ForwardingNetwork</a>
 <div class="block">A <code>Network</code> that delegates all methods to another instance.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../dagger/model/class-use/Key.html#dagger.model">Key</a>
 <div class="block">A type and an optional qualifier that
  is the lookup key for a binding.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/Key.Builder.html#dagger.model">Key.Builder</a>
 <div class="block">A builder for <a href="../../dagger/model/Key.html" title="class in dagger.model"><code>Key</code></a>s.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../dagger/model/class-use/Key.MultibindingContributionIdentifier.html#dagger.model">Key.MultibindingContributionIdentifier</a>
 <div class="block">An object that identifies a multibinding contribution method and the module class that
  contributes it to the graph.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/RequestKind.html#dagger.model">RequestKind</a>
 <div class="block">Represents the different kinds of <code>types</code> that may be
  requested as dependencies for the same key.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../dagger/model/class-use/Scope.html#dagger.model">Scope</a>
 <div class="block">A representation of a <code>Scope</code>.</div>
 </td>
@@ -213,24 +218,24 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.BindingNode.html#dagger.spi">BindingGraph.BindingNode</a>
-<div class="block">A <b>binding node</b> in the binding graph.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.ChildFactoryMethodEdge.html#dagger.spi">BindingGraph.ChildFactoryMethodEdge</a>
 <div class="block">An edge that represents a subcomponent factory method linking a parent component to a child
  subcomponent.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.ComponentNode.html#dagger.spi">BindingGraph.ComponentNode</a>
 <div class="block">A <b>component node</b> in the graph.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.DependencyEdge.html#dagger.spi">BindingGraph.DependencyEdge</a>
 <div class="block">An edge that represents a dependency on a binding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../dagger/model/class-use/BindingGraph.MaybeBindingNode.html#dagger.spi">BindingGraph.MaybeBindingNode</a>
+<div class="block">A node in the binding graph that is either a <a href="../../dagger/model/BindingGraph.BindingNode.html" title="interface in dagger.model"><code>BindingGraph.BindingNode</code></a> or a <a href="../../dagger/model/BindingGraph.MissingBindingNode.html" title="class in dagger.model"><code>BindingGraph.MissingBindingNode</code></a>.</div>
 </td>
 </tr>
 </tbody>
